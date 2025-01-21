@@ -1,0 +1,356 @@
+/********************************* container start  ********************************/
+
+.container {
+    background: url(../images/bg3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 30vh;
+    /* background-attachment: fixed; */
+}
+
+.container h1 {
+    margin-top: 100px;
+    font-size: 40px;
+    background: linear-gradient(90deg, var(--sub2), #fdc412);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    font-family: subFont;
+}
+
+.container .hello .hello-image img {
+    width: 400px;
+    border-radius: 12px;
+
+}
+
+/********************************* container end  ********************************/
+
+/********************************* all start  ********************************/
+
+.all {
+    background-image: url(../images/bg5.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/********************************* all end  ********************************/
+
+
+/********************************* last start  ********************************/
+.last {
+    width: 100%;
+    min-height: 40vh;
+    /* background-image: url(../images/bg5.jpg);
+    background-position: center;
+    background-size: cover; */
+}
+
+.last h1 {
+    width: 100% !important;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main);
+    letter-spacing: 1px;
+    font-size: 50px;
+}
+
+.last h1 span {
+    margin: 0 7px;
+    -webkit-text-stroke-color: var(--sub2);
+
+}
+
+.last .card {
+    background-color: var(--main);
+    width: 350px;
+    box-shadow: 0 0 10px var(--sub), 0 0 10px var(--sub), 0 0 10px var(--sub);
+    filter: drop-shadow(0 0 10px var(--sub));
+    border-radius: 16px;
+
+}
+
+.last .card p {
+    color: var(--sub);
+    font-size: 20px;
+}
+
+.last .card img {
+    box-shadow: 0 0 10px var(--sub);
+}
+
+.last .card .img1 {
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+.last .card .img2 {
+    width: 100%;
+    border-radius: 8px;
+
+    display: none;
+    transform: scale(0);
+}
+
+.last .card:hover {
+    .img1 {
+        display: none;
+        transform: scale(0);
+    }
+
+    .img2 {
+        display: block;
+        transform: scale(1);
+
+    }
+}
+
+/********************************* last end  ********************************/
+
+
+/********************************* most start  ********************************/
+.most {
+    width: 100%;
+    min-height: 40vh;
+    /* background-image: url(../images/bg5.jpg);
+    background-position: center;
+    background-size: cover; */
+}
+
+.most h1 {
+    width: 100% !important;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main);
+    letter-spacing: 1px;
+    font-size: 50px;
+}
+
+.most h1 span {
+    margin: 0 7px;
+    -webkit-text-stroke-color: var(--sub2);
+}
+
+.most .card {
+    background-color: var(--main);
+    width: 350px;
+    box-shadow: 0 0 10px var(--sub), 0 0 10px var(--sub), 0 0 10px var(--sub);
+    filter: drop-shadow(0 0 10px var(--sub));
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transform: scale(0.9);
+}
+
+.most .card p {
+    color: var(--sub);
+    font-size: 20px;
+}
+
+.most .card img {
+    box-shadow: 0 0 10px var(--sub);
+    width: 100%;
+}
+
+.most .card img:nth-child(2) {
+    transform: scale(0);
+    display: none;
+}
+
+.most .card:hover {
+    transform: scale(1);
+    box-shadow: 0 0 10px var(--sub);
+
+    img:nth-child(1) {
+        transform: scale(0);
+        display: none;
+    }
+
+    img:nth-child(2) {
+        transform: scale(1);
+        display: block;
+    }
+}
+
+
+/********************************* most end  ********************************/
+
+
+/********************************* offers start  ********************************/
+.offers {
+    width: 100%;
+    min-height: 40vh;
+    /* background-image: url(../images/bg5.jpg);
+    background-position: center;
+    background-size: cover; */
+}
+
+.offers h1 {
+    width: 100% !important;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main);
+    letter-spacing: 1px;
+    font-size: 50px;
+}
+
+.offers h1 span {
+    margin: 0 7px;
+    -webkit-text-stroke-color: var(--sub2);
+}
+
+.offers .card {
+    width: 350px;
+    background-color: var(--main);
+    box-shadow: 0 0 10px var(--sub), 0 0 10px var(--sub), 0 0 10px var(--sub);
+    filter: drop-shadow(0 0 10px var(--sub));
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.offers .card img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--sub);
+}
+
+.offers .card::before {
+    content: attr(data-sold);
+    position: absolute;
+    background-color: var(--sub);
+    left: -30px;
+    top: 5px;
+    padding: 8px;
+    width: 120px;
+    transform: rotate(-40deg);
+    text-align: center;
+    color: var(--main);
+    font-size: 20px;
+    box-shadow: 0 0 10px var(--main);
+    filter: drop-shadow(0 0 10px var(--main));
+
+}
+
+.offers .card .timer1,
+.timer2,
+.timer3 {
+    color: var(--sub);
+    font-size: 25px;
+    position: relative;
+    width: 100px;
+}
+
+.offers .card .timer1::after,
+.timer2::after,
+.timer3::after {
+    content: attr(data-get);
+    position: absolute;
+    right: -100px;
+    bottom: -10px;
+    color: var(--sub2);
+    padding: 4px;
+    transform: rotate(-60deg);
+
+}
+
+/********************************* offers end  ********************************/
+
+/********************************* happy customers start  ********************************/
+
+.happy-customer {
+    width: 100%;
+    min-height: 40vh;
+    /* background-image: url(../images/bg5.jpg);
+    background-position: center;
+    background-size: cover; */
+}
+
+.happy-customer h1 {
+    width: 100% !important;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main);
+    letter-spacing: 1px;
+    font-size: 50px;
+}
+
+.happy-customer h1 span {
+    margin: 0 7px;
+    -webkit-text-stroke-color: var(--sub2);
+}
+
+.happy-customer .card p {
+    font-size: 20px;
+    color: var(--sub);
+
+}
+
+.happy-customer .card {
+    width: 350px;
+    background-color: var(--main);
+    box-shadow: 0 0 10px var(--sub), 0 0 10px var(--sub), 0 0 10px var(--sub);
+    filter: drop-shadow(0 0 10px var(--sub));
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.happy-customer .card i {
+    color: goldenrod;
+    font-size: 30px;
+}
+
+.happy-customer .card img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--sub);
+}
+
+
+/********************************* happy customers end  ********************************/
+
+.help {
+    background-image: url(../images/help.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 60vh;
+    width: 100%;
+}
+
+/********************************* counter start  ********************************/
+
+section {
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: url(../images/bg1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+section p {
+    font-family: subFont;
+    font-weight: 800;
+}
+
+.nums {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nums .num {
+    flex: 1;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+}
+
+/********************************* counter end  ********************************/
