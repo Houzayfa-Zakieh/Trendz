@@ -1,268 +1,735 @@
-header marquee {
-    max-height: 10vh;
-    padding: 0 2px;
-    margin: 0;
-    width: 100%;
-    background-color: var(--sub);
-    margin-bottom: 8px;
-}
 
-header marquee button {
-    background-color: var(--main);
-    color: var(--sub);
-    padding: 1px;
-    width: 100px;
-    border-radius: 2px;
-    border: 1px solid var(--main);
-    margin-bottom: 2px;
-    margin-top: 2px;
-}
+    /* ****************************************    small screen start   ***************************************************** */
 
-header marquee p {
-    user-select: none;
-    font-size: 18px;
-}
+    @media (max-width:799px) {
+        #sider {
+            width: 250px;
+            height: 100vh;
+            background-color: var(--main);
+            padding: 30px 0;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            z-index: 10000;
+            overflow: auto;
+        }
 
-header marquee button:hover {
-    background-color: var(--sub);
-    color: var(--main);
-}
+        #sider.shows {
+            left: 0;
+        }
 
-header {
-    background-color: var(--main);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-}
+        #sider .siderImage {
+            padding: 8px;
+            margin-top: -50px;
 
-header.scroll {
-    box-shadow: 0 0 20px var(--sub);
-    filter: drop-shadow(0 0 10px var(--sub));
-}
+        }
 
-header img {
-    width: 80px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px var(--sub);
-    filter: drop-shadow(0 0 5px var(--sub));
-    margin-top: 5px;
-}
+        #sider h1 {
+            color: var(--sub);
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: -15px;
+        }
 
-header nav {
-    padding: 8px;
-}
+        #sider ul {
+            list-style: none;
+            margin-top: 15px;
+            position: relative;
+        }
 
-header nav a {
-    margin-right: 8px;
-    padding: 8px;
-    text-decoration: none;
-    color: var(--sub);
-    background-color: var(--main);
-    border-radius: 8px;
-    font-size: 18px;
-    position: relative;
-    overflow: hidden;
-}
+        #sider ul li {
+            padding: 10px;
+            background-color: var(--sub);
+            color: var(--sub);
+            margin-top: 5px;
+            
+        }
+        #sider ul li.shows{
+            animation-name: rotate;
+            animation-timing-function: ease-in;
+            animation-direction: normal;
+            animation-delay: 0s;
+            animation-duration: 0.75s;
+            
+        }
+        #sider ul a.shows{
+            animation-name: rotate1;
+            animation-timing-function: ease-in;
+            animation-direction: normal;
+            animation-delay: 0s;
+            animation-duration: 0.75s;
+        }
+        
+        @keyframes rotate1 {
+            0% {color: var(--main)};
+            100% { color: var(--sub)};
 
-header nav a:hover {
-    background-color: var(--sub);
-    color: var(--main);
+        }
+        @keyframes rotate {
+            0% {transform: rotate(45deg); background-color: var(--sub)};
+            100% {transform: rotate(0deg) ; background-color: var(--main)};
 
-}
+        }
 
-header nav a:before {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: -9px;
-    background-color: var(--main);
-    padding: 2px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-}
+        #sider ul li {
+            background-color: var(--main);
+        }
+        #sider i{
+            margin-right: 5px ;
+        }
+        #sider a {
+            color: var(--sub);
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 10px 0 0 10px;
+        }
+        #sider ul li:hover {
+            margin-left: 12px;
+            background-color: var(--sub);
+            color: var(--main);
+        }
 
-header nav a::after {
-    content: '';
-    position: absolute;
-    right: -10px;
-    bottom: -10px;
-    background-color: var(--main);
-    padding: 2px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-}
+        #sider ul li a:hover {
+            color: var(--main);
 
-header nav i {
-    margin-right: 8px;
-}
+        }
 
-header .btn {
-    font-style: italic;
-    filter: drop-shadow(0 0 5px var(--sub));
+        #sider .siderImage img {
+            width: 75%;
+        }
 
-}
+        #btnSider {
+            width: 40px;
+            min-height: 40px;
+            background-color: var(--main);
+            border: 2px solid var(--sub);
+            margin-right: 15px;
+            cursor: pointer;
+            border-radius: 7px;
+            position: relative;
+        }
 
-header .btn i {
-    margin-right: 5px;
-}
+        #btnSider::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            min-height: 3px !important;
+            background-color: var(--sub);
+            top: 7px ;
+            left: 3px;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
 
-/*************************  **************/
+        #btnSider::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            min-height: 3px !important;
+            background-color: var(--sub);
+            bottom: 7px;
+            left: 3px;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
 
-.fa-arrow-up {
-    border-radius: 8px;
-    width: 40px;
-    height: 40px;
-    font-size: 26px;
-    background-color: var(--main);
-    text-align: center;
-    padding: 10px 5px;
-    color: var(--sub);
-    position: fixed;
-    bottom: -40px;
-    right: 20px;
-    z-index: 999;
-    cursor: pointer;
-}
+        #btnSider.clickeds::before {
+            transform: rotate(-225deg);
+            top: 16px;
+        }
 
-.fa-arrow-up.show {
-    bottom: 20px;
-}
+        #btnSider.clickeds::after {
+            transform: rotate(225deg);
+            bottom: 16px;
+        }
 
-/*************************  **************/
+        #oneLine {
+            width: 30px;
+            min-height: 3px !important;
+            background-color: var(--sub);
+        }
 
-footer{
-    padding: 20px;
-    background-color: var(--main);
+        #oneLine.hides {
+            display: none;
+            transition: 0.3s;
+        }
 
-}
-footer .footerLogo img{
-    width: 160px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px var(--sub);
-    filter: drop-shadow(0 0 10px var(--sub));
-}
-footer .footerLogo p{
-    color: var(--sub);
-    font-size: 20px;
-}
-footer ul{
-    list-style: none;
-}
-footer ul li{
-    margin-top: 15px ;
-}
-footer ul li a{
-    text-decoration: none;
-    font-size: 18px;
-    color: var(--sub);
-    padding: 6px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-}
-footer ul li a i{
-    margin-right: 5px;
-}
+        header marquee {
+            max-height: 10vh;
+            padding: 0 2px;
+            margin: 0;
+            width: 100%;
+            background-color: var(--sub);
+            margin-bottom: 8px;
+        }
 
-footer ul li  a:hover {
-    background-color: var(--sub);
-    color: var(--main);
+        header marquee button {
+            background-color: var(--main);
+            color: var(--sub);
+            padding: 1px;
+            width: 100px;
+            border-radius: 2px;
+            border: 1px solid var(--main);
+            margin-bottom: 2px;
+            margin-top: 2px;
+        }
 
-}
+        header marquee p {
+            user-select: none;
+            font-size: 18px;
+        }
 
-footer ul li:hover  a::before {
-    content: '';
-    position: absolute;
-    right: -10px;
-    top: -9px;
-    background-color: var(--main);
-    padding: 2px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-}
+        header marquee button:hover {
+            background-color: var(--sub);
+            color: var(--main);
+        }
 
-footer ul li:hover  a::after {
-    content: '';
-    position: absolute;
-    left: -10px;
-    bottom: -10px;
-    background-color: var(--main);
-    padding: 2px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-}
-footer .line{
+        header {
+            background-color: var(--main);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            min-height: 10vh;
+        }
 
-    width: 80%;
-    height: 2px;
-    background-color: var(--sub);
-    color: var(--sub);
-    border-radius: 50%;
-}
-/********************************* donate start  ********************************/
+        header.scroll {
+            box-shadow: 0 0 20px var(--sub);
+            filter: drop-shadow(0 0 10px var(--sub));
 
-.donate {
-    background: transparent;
-    backdrop-filter: blur(10px);
-    width: 100%;
-    min-height: 100vh;
-    transform: scale(0);
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+        }
 
-}
+        header img {
+            width: 80px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px var(--sub);
+            filter: drop-shadow(0 0 5px var(--sub));
+            margin-top: 5px;
+            margin-left: 15px;
+        }
 
-.donate-content {
-    background-color: var(--sub);
-    width: 650px;
-    min-height: 30vh;
-    position: relative;
-    padding: 30px;
-    border-radius: 8px;
-}
+        header nav {
+            display: none;
+        }
 
-.donate-content i {
-    position: absolute;
-    right: 5px;
-    top: 2px;
-    cursor: pointer;
+        header nav a {
+            margin-right: 8px;
+            padding: 8px;
+            text-decoration: none;
+            color: var(--sub);
+            background-color: var(--main);
+            border-radius: 8px;
+            font-size: 18px;
+            position: relative;
+            overflow: hidden;
+        }
 
-}
+        header nav a:hover {
+            background-color: var(--sub);
+            color: var(--main);
 
-.donate-content input {
-    padding: 1px;
-    border-radius: 8px;
-    outline: none;
-}
+        }
 
-.donate-content .btn {
-    filter: drop-shadow(0 0 10px var(--main));
-}
+        header nav a:before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: -9px;
+            background-color: var(--main);
+            padding: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
 
-.donate-content .btn:hover {
-    filter: drop-shadow(0 0 10px var(--main));
+        header nav a::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            bottom: -10px;
+            background-color: var(--main);
+            padding: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
 
-}
+        header nav i {
+            margin-right: 8px;
+        }
 
-.donate.show {
-    z-index: 1011 !important;
-    transform: scale(1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        header .btn {
+            display: none;
+        }
 
-#donate {
-    cursor: pointer;
-}
+        header .btn i {
+            margin-right: 5px;
+        }
 
-/********************************* donate end  ********************************/
+        /*************************  **************/
+
+        .fa-arrow-up {
+            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            font-size: 26px;
+            background-color: var(--main);
+            text-align: center;
+            padding: 10px 5px;
+            color: var(--sub);
+            position: fixed;
+            bottom: -40px;
+            right: 20px;
+            z-index: 999;
+            cursor: pointer;
+        }
+
+        .fa-arrow-up.show {
+            bottom: 20px;
+        }
+
+        /*************************  **************/
+
+        footer {
+            padding: 20px;
+            background-color: var(--main);
+
+        }
+
+        footer .footerLogo img {
+            width: 160px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px var(--sub);
+            filter: drop-shadow(0 0 10px var(--sub));
+        }
+
+        footer .footerLogo p {
+            color: var(--sub);
+            font-size: 20px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-top: 15px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: var(--sub);
+            padding: 6px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        footer ul li a i {
+            margin-right: 5px;
+        }
+
+        footer ul li a:hover {
+            background-color: var(--sub);
+            color: var(--main);
+
+        }
+
+        footer ul li:hover a::before {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: -9px;
+            background-color: var(--main);
+            padding: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        footer ul li:hover a::after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            background-color: var(--main);
+            padding: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        footer .line {
+
+            width: 85%;
+            height: 2px;
+            background-color: var(--sub);
+            color: var(--sub);
+            border-radius: 50%;
+        }
+
+        /********************************* donate start  ********************************/
+
+        .donate {
+            background: transparent;
+            backdrop-filter: blur(10px);
+            width: 100%;
+            min-height: 100vh;
+            transform: scale(0);
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+        }
+
+        .donate-content {
+            background-color: var(--sub);
+            width: 650px;
+            min-height: 30vh;
+            position: relative;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .donate-content i {
+            position: absolute;
+            right: 5px;
+            top: 2px;
+            cursor: pointer;
+
+        }
+
+        .donate-content input {
+            padding: 1px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .donate-content .btn {
+            filter: drop-shadow(0 0 10px var(--main));
+        }
+
+        .donate-content .btn:hover {
+            filter: drop-shadow(0 0 10px var(--main));
+
+        }
+
+        .donate.show {
+            z-index: 1011 !important;
+            transform: scale(1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #donate {
+            cursor: pointer;
+        }
+
+        /********************************* donate end  ********************************/
+
+
+
+    }
+
+    /* ****************************************    small screen end   ***************************************************** */
+
+
+/* ****************************************    big screen start   ***************************************************** */
+
+
+    @media (min-width: 800px) {
+        .btnSider {
+            display: none;
+        }
+
+        .sider {
+            display: none;
+        }
+
+        header marquee {
+            max-height: 10vh;
+            padding: 0 2px;
+            margin: 0;
+            width: 100%;
+            background-color: var(--sub);
+            margin-bottom: 8px;
+        }
+
+        header marquee button {
+            background-color: var(--main);
+            color: var(--sub);
+            padding: 1px;
+            width: 100px;
+            border-radius: 2px;
+            border: 1px solid var(--main);
+            margin-bottom: 2px;
+            margin-top: 2px;
+        }
+
+        header marquee p {
+            user-select: none;
+            font-size: 18px;
+        }
+
+        header marquee button:hover {
+            background-color: var(--sub);
+            color: var(--main);
+        }
+
+        header {
+            background-color: var(--main);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+        }
+
+        header.scroll {
+            box-shadow: 0 0 20px var(--sub);
+            filter: drop-shadow(0 0 10px var(--sub));
+
+        }
+
+        header img {
+            width: 80px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px var(--sub);
+            filter: drop-shadow(0 0 5px var(--sub));
+            margin-top: 5px;
+            margin-left: 15px;
+        }
+
+        header nav {
+            padding: 8px;
+        }
+
+        header nav a {
+            margin-right: 8px;
+            padding: 8px;
+            text-decoration: none;
+            color: var(--sub);
+            background-color: var(--main);
+            border-radius: 8px;
+            font-size: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header nav a:hover {
+            background-color: var(--sub);
+            color: var(--main);
+
+        }
+
+        header nav a:before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: -9px;
+            background-color: var(--main);
+            padding: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        header nav a::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            bottom: -10px;
+            background-color: var(--main);
+            padding: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        header nav i {
+            margin-right: 8px;
+        }
+
+        header .btn {
+            font-style: italic;
+            filter: drop-shadow(0 0 5px var(--sub));
+            margin-right: 15px;
+        }
+
+        header .btn i {
+            margin-right: 5px;
+        }
+
+        /*************************  **************/
+
+        .fa-arrow-up {
+            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            font-size: 26px;
+            background-color: var(--main);
+            text-align: center;
+            padding: 10px 5px;
+            color: var(--sub);
+            position: fixed;
+            bottom: -40px;
+            right: 20px;
+            z-index: 999;
+            cursor: pointer;
+        }
+
+        .fa-arrow-up.show {
+            bottom: 20px;
+        }
+
+        /*************************  **************/
+
+        footer {
+            padding: 20px;
+            background-color: var(--main);
+
+        }
+
+        footer .footerLogo img {
+            width: 160px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px var(--sub);
+            filter: drop-shadow(0 0 10px var(--sub));
+        }
+
+        footer .footerLogo p {
+            color: var(--sub);
+            font-size: 20px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-top: 15px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: var(--sub);
+            padding: 6px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        footer ul li a i {
+            margin-right: 5px;
+        }
+
+        footer ul li a:hover {
+            background-color: var(--sub);
+            color: var(--main);
+
+        }
+
+        footer ul li:hover a::before {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: -9px;
+            background-color: var(--main);
+            padding: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        footer ul li:hover a::after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            background-color: var(--main);
+            padding: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        footer .line {
+
+            width: 80%;
+            height: 2px;
+            background-color: var(--sub);
+            color: var(--sub);
+            border-radius: 50%;
+        }
+
+        /********************************* donate start  ********************************/
+
+        .donate {
+            background: transparent;
+            backdrop-filter: blur(10px);
+            width: 100%;
+            min-height: 100vh;
+            transform: scale(0);
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+        }
+
+        .donate-content {
+            background-color: var(--sub);
+            width: 650px;
+            min-height: 30vh;
+            position: relative;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .donate-content i {
+            position: absolute;
+            right: 5px;
+            top: 2px;
+            cursor: pointer;
+
+        }
+
+        .donate-content input {
+            padding: 1px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .donate-content .btn {
+            filter: drop-shadow(0 0 10px var(--main));
+        }
+
+        .donate-content .btn:hover {
+            filter: drop-shadow(0 0 10px var(--main));
+
+        }
+
+        .donate.show {
+            z-index: 1011 !important;
+            transform: scale(1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #donate {
+            cursor: pointer;
+        }
+
+        /********************************* donate end  ********************************/
+
+
+    }
+
+    /* ****************************************    big screen end   ***************************************************** */
 

@@ -16,12 +16,14 @@ i {
 
 @font-face {
     font-family: mainFont;
-    src: url(Oswald-VariableFont_wght.ttf);
+    src: url(Roboto-Regular.ttf);
 }
-
+h1,h2,h3,h4,h5,h6{
+    font-family: subFont;
+}
 @font-face {
     font-family: subFont;
-    src: url(Roboto-Regular.ttf);
+    src: url(Oswald-VariableFont_wght.ttf);
 }
 
 :root {
@@ -48,7 +50,12 @@ html {
     justify-content: center;
     flex-wrap: wrap;
 }
-
+.f-start{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+}
 .f-bet {
     display: flex;
     align-items: center;
@@ -308,14 +315,6 @@ html {
     min-height: 100vh;
 }
 
-.image {
-    width: 350px;
-}
-
-.image img {
-    width: 100%;
-    border-radius: 15px;
-}
 
 .wid100 {
     width: 100%;

@@ -1,3 +1,12 @@
+// var fronts = document.querySelectorAll('.front');
+// fronts.forEach((front) => {
+//     getAttribute("src") = front.style.backgroundImage;
+// })
+
+var orders = document.querySelectorAll('.back button');
+
+
+
 ////////////////////////////////////////////  1  /////////////////////////////////////////////////////// 
 
 var drag1 = document.querySelector('.dragbtn1');
@@ -21,8 +30,10 @@ var front1 = document.querySelector('.front1')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front1.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
-    });
-});
+                document.querySelector('.item .card .image1').style.backgroundImage = front1.style.backgroundImage; 
+            })
+})
+
 
 ////////////////////////////////////////////  2  /////////////////////////////////////////////////////// 
 
@@ -47,6 +58,8 @@ var front2 = document.querySelector('.front2')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front2.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
+
     });
 });
 
@@ -74,6 +87,8 @@ var front3 = document.querySelector('.front3')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front3.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
+
     });
 });
 
@@ -100,6 +115,8 @@ var front4 = document.querySelector('.front4')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front4.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
+
     });
 });
 
@@ -127,6 +144,8 @@ var front5 = document.querySelector('.front5')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front5.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
+
     });
 });
 
@@ -154,6 +173,7 @@ var front6 = document.querySelector('.front6')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front6.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
     });
 });
 
@@ -181,6 +201,7 @@ var front7 = document.querySelector('.front7')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front7.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
     });
 });
 
@@ -206,6 +227,7 @@ var front8 = document.querySelector('.front8')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front8.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
     });
 });
 
@@ -233,6 +255,7 @@ var front9 = document.querySelector('.front9')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front9.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
     });
 });
 
@@ -259,6 +282,7 @@ var front10 = document.querySelector('.front10')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front10.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
     });
 });
 
@@ -286,6 +310,7 @@ var front11 = document.querySelector('.front11')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front11.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
     });
 });
 
@@ -312,6 +337,7 @@ var front12 = document.querySelector('.front12')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front12.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
     });
 });
 
@@ -340,6 +366,7 @@ var front13 = document.querySelector('.front13')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front13.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
     });
 });
 
@@ -369,6 +396,7 @@ var front14 = document.querySelector('.front14')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front14.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
     });
 });
 
@@ -396,6 +424,7 @@ var front15 = document.querySelector('.front15')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front15.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = "url(" + color.getAttribute('data-image') + ")"; 
     });
 });
 
@@ -423,5 +452,6 @@ var front16 = document.querySelector('.front16')
 colors.forEach((color) => {
     color.addEventListener('click', () => {
         front16.style.backgroundImage = "url(" + color.getAttribute('data-image') + ")";
+        document.querySelector('.item .card .image1').style.backgroundImage = front16.style.backgroundImage; 
     });
 });

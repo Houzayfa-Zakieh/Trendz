@@ -1,348 +1,826 @@
-body {
-    background-image: url(../images/bg5.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@media (max-width:799px) {
+    body {
+        background-image: url(../images/bg5.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+    }
+    
+    .container {
+        padding: 20px 0;
+        margin-top: 120px;
+    }
+    
+    .in-cont {
+        display: flex;
+        width: 180px;
+        height: 450px;
+        perspective: 1000px;
+        position: relative;
+        margin-right: -200px;
+    }
+    
+    .in-cont>.card.rotate {
+        cursor: pointer;
+        transform: rotateY(180deg);
+    }
+    
+    .in-cont .card {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        transition: transform 1000ms;
+        transform-style: preserve-3d;
+        z-index: 333;
+    }
+    
+    .in-cont .card .front {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .front,
+    .back {
+        height: 100%;
+        width: 100%;
+        border-radius: 0 16px 16px 0;
+        box-shadow: 0 0 10px var(--sha);
+        position: absolute;
+        backface-visibility: hidden;
+        z-index: 222;
+    }
+    
+    .front {
+        background-color: var(--sub);
+    }
+    
+    .back {
+        background-color: var(--main);
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .drag {
+        height: 100%;
+        width: 100%;
+        border-radius: 16px 0 0 16px;
+        box-shadow: 0 0 5px 2px var(--sha);
+        position: absolute;
+        backface-visibility: hidden;
+        transition: transform 1000ms;
+        z-index: -1;
+    }
+    
+    .dragbtn {
+        position: absolute;
+        width: 25px;
+        padding: 5px;
+        border-radius: 16px 0 0 16px;
+        left: -25px;
+        top: 50%;
+        background: none;
+        outline: none;
+        border: none;
+        box-shadow: 0 0 10px var(--sha);
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    
+    .drag.show {
+        left: -180px;
+        z-index: 33;
+    
+    }
+    .drag.show .dragbtn{
+        left: 0;
+        transform: rotate(180deg);
+    }
+    
+    img {
+        filter: drop-shadow(0 0 10px var(--sha));
+    }
+    
+    .green {
+        width: 25px;
+        height: 25px;
+        background-color: #9cda48;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    }
+    
+    .white {
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    
+    
+    }
+    
+    .black {
+        width: 25px;
+        height: 25px;
+        background-color: #000;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    
+    
+    }
+    
+    .gray {
+        width: 25px;
+        height: 25px;
+        background-color: #777a86;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    
+    }
+    
+    .deepblue {
+        width: 25px;
+        height: 25px;
+        background-color: #142134;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    
+    }
+    
+    .red {
+        width: 25px;
+        height: 25px;
+        background-color: red;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    
+    }
+    
+    .blue {
+        width: 25px;
+        height: 25px;
+        background-color: blue;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    
+    }
+    
+    .beige {
+    
+        width: 25px;
+        height: 25px;
+        background-color: #d9c8b0;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    }
+    
+    .orange {
+    
+        width: 25px;
+        height: 25px;
+        background-color: orange;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    }
+    
+    .front1 {
+        background-image: url(../images/shirtall.webp);
+    }
+    
+    .front2 {
+        background-image: url(../images/full1.webp);
+    
+    }
+    
+    .front3 {
+        background-image: url(../images/bag1black.webp);
+    }
+    
+    .front4 {
+        background-image: url(../images/bag2black.webp);
+    
+    }
+    
+    .front5 {
+        background-image: url(../images/begama1black.webp);
+    }
+    
+    .front6 {
+        background-image: url(../images/begama2black.webp);
+    
+    }
+    
+    .front7 {
+        background-image: url(../images/begama3black.webp);
+    }
+    
+    .front8 {
+        background-image: url(../images/bottle1black.webp);
+    }
+    
+    .front9 {
+        background-image: url(../images/bottle2black.webp);
+    }
+    
+    .front10 {
+        background-image: url(../images/shirt2black.webp);
+    }
+    
+    .front11 {
+        background-image: url(../images/shoes1blue.webp);
+    }
+    
+    .front12 {
+        background-image: url(../images/shoes2baig.webp);
+    }
+    
+    .front13 {
+        background-image: url(../images/shoes3black.webp);
+    }
+    
+    .front14 {
+        background-image: url(../images/shoes4deepblue.webp);
+    
+    }
+    
+    .front15 {
+        background-image: url(../images/shoes5black.webp);
+    }
+    
+    .front16 {
+        background-image: url(../images/shortdeepblue.webp);
+    
+    }
+    
+    .filter-mobile button.clicked::before {
+        content: '';
+        position: absolute;
+        left: 100px;
+        height: 220px;
+        transform: rotate(75deg);
+        width: 4px;
+        background-color: green;
+        top: -100px;
+    }
+    
+    .filter-mobile button.clicked::after {
+        content: '';
+        position: absolute;
+        right: 100px;
+        height: 220px;
+        transform: rotate(-75deg);
+        width: 4px;
+        background-color: green;
+        bottom: -100px;
+    }
+    
+    .filter {
+        display: none;
+        
+    }
+    .filter .filter-container{
+        display: none;
+    } 
+    .filter-mobile {
+        background-color: var(--sub);
+        position: fixed;
+        right: -200px;
+        top: 121px;
+        width: 200px;
+        padding: 10px;
+        height: 55vh;
+        z-index: 222;
+    }  
+    .filter-mobile.show{
+        right: 0;
+    }
+    .filter-mobile ul{
+        list-style: none;
+    }
+    .mobile-btns i{
+        color: var(--sub);
+        cursor: pointer;
+        font-size: 20px;
+    }
+    #oneLine{
+        height: 3px !important;
+    }
+    /* .filter-color {
+        width: 100px;
+        padding: 20px;
+    }
+    
+    .filter-color:nth-child(1) {
+        background-color: orange;
+    }
+    
+    .filter-color:nth-child(2) {
+        background-color: red;
+    }
+    
+    .filter-color:nth-child(3) {
+        background-color: blue;
+    }
+    
+    .filter-color:nth-child(4) {
+        background-color: black;
+    }
+    
+    .filter-color:nth-child(5) {
+        background-color: #142134;
+    }
+    
+    .filter-color:nth-child(6) {
+        background-color: #d9c8b0;
+        color: black;
+    
+    }
+    
+    .filter-color:nth-child(7) {
+        background-color: green;
+    }
+    
+    .filter-color:nth-child(8) {
+        background-color: white;
+        color: black;
+    }
+    
+    .filter-color:nth-child(9) {
+        background-color: gray;
+    } */
+    
+    .filter-clothes {
+        width: 100px;
+    
+    }
+    .show{
+        display: flex;
+        transform: scale(1);
+    }
+    .hide{
+        display: none;
+        transform: scale(0);
+    }
+    .mobile{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
+    }
+    
+    .search {
+        background: transparent;
+        backdrop-filter: blur(10px);
+        width: 100%;
+        min-height: 100vh;
+        transform: scale(0);
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+    }
+
+    .search-content i {
+        position: absolute;
+        right: 5px;
+        top: 2px;
+        cursor: pointer;
+
+    }
+    .search-content {
+        background-color: var(--sub);
+        width: 650px;
+        min-height: 30vh;
+        position: relative;
+        padding: 30px;
+        border-radius: 8px;
+    }
+    
+    .search-content input {
+        padding: 4px;
+        border-radius: 8px;
+        outline: none;
+    }
+    
+    .search-content .btn {
+        filter: drop-shadow(0 0 10px var(--main));
+    }
+
+    .search-content .btn:hover {
+        filter: drop-shadow(0 0 10px var(--main));
+
+    }
+
+    .search.show {
+        z-index: 1011 !important;
+        transform: scale(1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .oneLine{
+        min-height: 3px !important;
+    }
 }
 
-.container {
-    padding: 30px;
-}
 
-.in-cont {
-    display: flex;
-    width: 280px;
-    height: 500px;
-    perspective: 1000px;
-    position: relative;
-    margin-right: -200px;
-}
 
-.in-cont>.card.rotate {
-    cursor: pointer;
-    transform: rotateY(180deg);
-}
-
-.in-cont .card {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    transition: transform 1000ms;
-    transform-style: preserve-3d;
-    z-index: 333;
-}
-
-.in-cont .card .front {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.front,
-.back {
-    height: 100%;
-    width: 100%;
-    border-radius: 0 16px 16px 0;
-    box-shadow: 0 0 10px var(--sha);
-    position: absolute;
-    backface-visibility: hidden;
-    z-index: 222;
-}
-
-.front {
-    background-color: var(--sub);
-}
-
-.back {
-    background-color: var(--main);
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.drag {
-    height: 100%;
-    width: 100%;
-    border-radius: 16px 0 0 16px;
-    box-shadow: 0 0 5px 2px var(--sha);
-    position: absolute;
-    backface-visibility: hidden;
-    transition: transform 1000ms;
-    z-index: -1;
-}
-
-.dragbtn {
-    position: absolute;
-    width: 30px;
-    padding: 5px;
-    border-radius: 16px 0 0 16px;
-    left: -30px;
-    top: 50%;
-    background: none;
-    outline: none;
-    border: none;
-    box-shadow: 0 0 10px var(--sha);
-    font-size: 18px;
-    cursor: pointer;
-    transition: all 0.3s;
-
-}
-
-.drag.show {
-    left: -280px;
-    z-index: 33;
-
-}
-
-img {
-    filter: drop-shadow(0 0 10px var(--sha));
-}
-
-.green {
-    width: 25px;
-    height: 25px;
-    background-color: #9cda48;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid #000;
-}
-
-.white {
-    width: 25px;
-    height: 25px;
-    background-color: #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid #000;
-
-
-}
-
-.black {
-    width: 25px;
-    height: 25px;
-    background-color: #000;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid #000;
-
-
-}
-
-.gray {
-    width: 25px;
-    height: 25px;
-    background-color: #777a86;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid #000;
-
-}
-
-.deepblue {
-    width: 25px;
-    height: 25px;
-    background-color: #142134;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid #000;
-
-}
-
-.red {
-    width: 25px;
-    height: 25px;
-    background-color: red;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid #000;
-
-}
-
-.blue {
-    width: 25px;
-    height: 25px;
-    background-color: blue;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid #000;
-
-}
-
-.beige {
-
-    width: 25px;
-    height: 25px;
-    background-color: #d9c8b0;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid #000;
-}
-
-.orange {
-
-    width: 25px;
-    height: 25px;
-    background-color: orange;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid #000;
-}
-
-.front1 {
-    background-image: url(../images/shirtall.webp);
-}
-
-.front2 {
-    background-image: url(../images/full1.webp);
-
-}
-
-.front3 {
-    background-image: url(../images/bag1black.webp);
-}
-
-.front4 {
-    background-image: url(../images/bag2black.webp);
-
-}
-
-.front5 {
-    background-image: url(../images/begama1black.webp);
-}
-
-.front6 {
-    background-image: url(../images/begama2black.webp);
-
-}
-
-.front7 {
-    background-image: url(../images/begama3black.webp);
-}
-
-.front8 {
-    background-image: url(../images/bottle1black.webp);
-}
-
-.front9 {
-    background-image: url(../images/bottle2black.webp);
-}
-
-.front10 {
-    background-image: url(../images/shirt2black.webp);
-}
-
-.front11 {
-    background-image: url(../images/shoes1blue.webp);
-}
-
-.front12 {
-    background-image: url(../images/shoes2baig.webp);
-}
-
-.front13 {
-    background-image: url(../images/shoes3black.webp);
-}
-
-.front14 {
-    background-image: url(../images/shoes4deepblue.webp);
-
-}
-
-.front15 {
-    background-image: url(../images/shoes5black.webp);
-}
-
-.front16 {
-    background-image: url(../images/shortdeepblue.webp);
-
-}
-
-.filter button.clicked::before {
-    content: '';
-    position: absolute;
-    left: 100px;
-    height: 220px;
-    transform: rotate(75deg);
-    width: 4px;
-    background-color: green;
-    top: -100px;
-}
-
-.filter button.clicked::after {
-    content: '';
-    position: absolute;
-    right: 100px;
-    height: 220px;
-    transform: rotate(-75deg);
-    width: 4px;
-    background-color: green;
-    bottom: -100px;
-}
-
-.filter {
-    margin-top: 120px;
-    min-height: 10vh;
-    padding: 20px;
-    background-color: var(--sub);
-}
-
-/* .filter-color {
-    width: 100px;
-    padding: 20px;
-}
-
-.filter-color:nth-child(1) {
-    background-color: orange;
-}
-
-.filter-color:nth-child(2) {
-    background-color: red;
-}
-
-.filter-color:nth-child(3) {
-    background-color: blue;
-}
-
-.filter-color:nth-child(4) {
-    background-color: black;
-}
-
-.filter-color:nth-child(5) {
-    background-color: #142134;
-}
-
-.filter-color:nth-child(6) {
-    background-color: #d9c8b0;
-    color: black;
-
-}
-
-.filter-color:nth-child(7) {
-    background-color: green;
-}
-
-.filter-color:nth-child(8) {
-    background-color: white;
-    color: black;
-}
-
-.filter-color:nth-child(9) {
-    background-color: gray;
-} */
-
-.filter-clothes {
-    width: 100px;
-
-}
-.show{
-    display: flex;
-    transform: scale(1);
-}
-.hide{
-    display: none;
-    transform: scale(0);
+/*************************  **********************************/
+@media (min-width:800px) {
+    body {
+        background-image: url(../images/bg5.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+    }
+    
+    .container {
+        padding: 30px;
+    }
+    
+    .in-cont {
+        display: flex;
+        width: 280px;
+        height: 500px;
+        perspective: 1000px;
+        position: relative;
+        margin-right: -200px;
+    }
+    
+    .in-cont>.card.rotate {
+        cursor: pointer;
+        transform: rotateY(180deg);
+    }
+    
+    .in-cont .card {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        transition: transform 1000ms;
+        transform-style: preserve-3d;
+        z-index: 333;
+    }
+    
+    .in-cont .card .front {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .front,
+    .back {
+        height: 100%;
+        width: 100%;
+        border-radius: 0 16px 16px 0;
+        box-shadow: 0 0 10px var(--sha);
+        position: absolute;
+        backface-visibility: hidden;
+        z-index: 222;
+    }
+    
+    .front {
+        background-color: var(--sub);
+    }
+    
+    .back {
+        background-color: var(--main);
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .drag {
+        height: 100%;
+        width: 100%;
+        border-radius: 16px 0 0 16px;
+        box-shadow: 0 0 5px 2px var(--sha);
+        position: absolute;
+        backface-visibility: hidden;
+        transition: transform 1000ms;
+        z-index: -1;
+    }
+    
+    .dragbtn {
+        position: absolute;
+        width: 30px;
+        padding: 5px;
+        border-radius: 16px 0 0 16px;
+        left: -30px;
+        top: 50%;
+        background: none;
+        outline: none;
+        border: none;
+        box-shadow: 0 0 10px var(--sha);
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.3s;
+    
+    }
+    .drag.show .dragbtn{
+        left: 0;
+        transform: rotate(180deg);
+    }
+    
+    .drag.show {
+        left: -280px;
+        z-index: 33;
+    
+    }
+    
+    img {
+        filter: drop-shadow(0 0 10px var(--sha));
+    }
+    
+    .green {
+        width: 25px;
+        height: 25px;
+        background-color: #9cda48;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    }
+    
+    .white {
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    
+    
+    }
+    
+    .black {
+        width: 25px;
+        height: 25px;
+        background-color: #000;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    
+    
+    }
+    
+    .gray {
+        width: 25px;
+        height: 25px;
+        background-color: #777a86;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    
+    }
+    
+    .deepblue {
+        width: 25px;
+        height: 25px;
+        background-color: #142134;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    
+    }
+    
+    .red {
+        width: 25px;
+        height: 25px;
+        background-color: red;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    
+    }
+    
+    .blue {
+        width: 25px;
+        height: 25px;
+        background-color: blue;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    
+    }
+    
+    .beige {
+    
+        width: 25px;
+        height: 25px;
+        background-color: #d9c8b0;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    }
+    
+    .orange {
+    
+        width: 25px;
+        height: 25px;
+        background-color: orange;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid #000;
+    }
+    
+    .front1 {
+        background-image: url(../images/shirtall.webp);
+    }
+    
+    .front2 {
+        background-image: url(../images/full1.webp);
+    
+    }
+    
+    .front3 {
+        background-image: url(../images/bag1black.webp);
+    }
+    
+    .front4 {
+        background-image: url(../images/bag2black.webp);
+    
+    }
+    
+    .front5 {
+        background-image: url(../images/begama1black.webp);
+    }
+    
+    .front6 {
+        background-image: url(../images/begama2black.webp);
+    
+    }
+    
+    .front7 {
+        background-image: url(../images/begama3black.webp);
+    }
+    
+    .front8 {
+        background-image: url(../images/bottle1black.webp);
+    }
+    
+    .front9 {
+        background-image: url(../images/bottle2black.webp);
+    }
+    
+    .front10 {
+        background-image: url(../images/shirt2black.webp);
+    }
+    
+    .front11 {
+        background-image: url(../images/shoes1blue.webp);
+    }
+    
+    .front12 {
+        background-image: url(../images/shoes2baig.webp);
+    }
+    
+    .front13 {
+        background-image: url(../images/shoes3black.webp);
+    }
+    
+    .front14 {
+        background-image: url(../images/shoes4deepblue.webp);
+    
+    }
+    
+    .front15 {
+        background-image: url(../images/shoes5black.webp);
+    }
+    
+    .front16 {
+        background-image: url(../images/shortdeepblue.webp);
+    
+    }
+    .filter-mobile {
+        display: none;
+    }    
+    #filter-mobile{
+        display: none;
+    }
+    #search{
+        display: none;
+    }
+    .mobile-btns{
+        display: none;
+    }
+    /* .filter button.clicked::before {
+        content: '';
+        position: absolute;
+        left: 100px;
+        height: 220px;
+        transform: rotate(75deg);
+        width: 4px;
+        background-color: green;
+        top: -100px;
+    }
+     */
+    header img{
+        margin-left: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    /* .filter button.clicked::after {
+        content: '';
+        position: absolute;
+        right: 100px;
+        height: 220px;
+        transform: rotate(-75deg);
+        width: 4px;
+        background-color: green;
+        bottom: -100px;
+    } */
+    
+    .filter {
+        min-height: 10vh;
+        padding: 20px;
+        background-color: var(--sub);
+        margin-top: 35px;
+    }
+    .icons{
+        display: none;
+
+    }
+    header {
+        min-height: 122px;
+    }
+    /* .filter-color {
+        width: 100px;
+        padding: 20px;
+    }
+    
+    .filter-color:nth-child(1) {
+        background-color: orange;
+    }
+    
+    .filter-color:nth-child(2) {
+        background-color: red;
+    }
+    
+    .filter-color:nth-child(3) {
+        background-color: blue;
+    }
+    
+    .filter-color:nth-child(4) {
+        background-color: black;
+    }
+    
+    .filter-color:nth-child(5) {
+        background-color: #142134;
+    }
+    
+    .filter-color:nth-child(6) {
+        background-color: #d9c8b0;
+        color: black;
+    
+    }
+    
+    .filter-color:nth-child(7) {
+        background-color: green;
+    }
+    
+    .filter-color:nth-child(8) {
+        background-color: white;
+        color: black;
+    }
+    
+    .filter-color:nth-child(9) {
+        background-color: gray;
+    } */
+    
+    .filter-clothes {
+        width: 100px;
+    
+    }
+    .show{
+        display: flex;
+        transform: scale(1);
+    }
+    .hide{
+        display: none;
+        transform: scale(0);
+    }    
+    header a{
+        font-size:18px
+    }
+    .mobile-btns{
+        display:none;
+    }    
 }

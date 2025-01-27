@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/products.css">
+    <link rel="stylesheet" href="styles/order.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/navs.css">
+    <link rel="stylesheet" href="styles/products.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/v4-shims.min.css">
     <script src="https://kit.fontawesome.com/5cd3c2f996.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/logo.jpg">
     <title>Trendz-Home</title>
@@ -16,7 +19,7 @@
     <!------------------------------- header start  ----------------------------------------->
     <i class="fa-solid fa-arrow-up"></i>
 
-    <header class="f-ard">
+    <header class="f-bet">
         <marquee>
             <p class="txt-main wid100">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio ipsam obcaecati deleniti saepe
@@ -34,9 +37,57 @@
             <a href="contact.html"><i class="fa-solid fa-phone"></i>Contact us</a>
         </nav>
         <a href="sign.html" class="btn"><i class="fa-solid fa-sign-in"></i>Sign in</a>
-    </header>
 
+
+        <!------------------------------- header responsive start  ----------------------------------------->
+        <div class="mobile-btns f-cen g24">
+            <div class="icons f-cen g12">
+            <i class="fa-solid fa-filter" id="filter-mobile" title="Filter"></i>
+            <i class="fa-solid fa-search" id="search" title="Search"></i>
+        </div>
+            <div class="btnSider f-cen" id="btnSider">
+                <div class="oneLine" id="oneLine"></div>
+            </div>
+        </div>
+        
+    </header>
     <!------------------------------- header end  ----------------------------------------->
+    <div class="sider" id="sider">
+        <div class="siderImage f-cen f-col">
+            <img src="images/logo.jpg" alt="logo">
+            <h3 class="txt-sub txt-cen"><span class="txt-sub2 fo-size30">Trendz</span> <br>
+                Fashion & Clothing Company</h3>
+        </div>
+
+        <ul>
+
+            <a href="index.html">
+                <li><i class="fa-solid fa-home"></i>Home</li>
+            </a>
+            <a href="prodects.html">
+                <li><i class="fa-solid fa-shirt"></i>Products</li>
+            </a>
+            <a href="offers.html">
+                <li><i class="fa-solid fa-percent"></i>Offers</li>
+            </a>
+            <a href="about.html">
+                <li><i class="fa-solid fa-people-group"></i>About us</li>
+            </a>
+            <a href="contact.html">
+                <li><i class="fa-solid fa-phone"></i>Contact us</li>
+            </a>
+            <a href="sign.html">
+                <li><i class="fa-solid fa-sign-in"></i>Sign in</li>
+            </a>
+
+        </ul>
+
+    </div>
+
+
+    <!------------------------------- header responsive end  ----------------------------------------->
+
+
 
 
 
@@ -52,9 +103,26 @@
     </div>
 
     <!------------------------------- donate end  ----------------------------------------->
-    <div class="filter f-cen wid100">
+  <!------------------------------- search start  ----------------------------------------->
+
+  <div class="search">
+    <div class="search-content f-cen f-col g12">
+        <i class="fa-solid fa-2x fa-close"></i>
+        <input type="search" name="search" id="search" placeholder="Search...">
+        <button type="submit" class="btn">Search</button>
+    </div>
+</div>
+
+<!------------------------------- search end  ----------------------------------------->
+
+
+
+
+    <!------------------------------- filter start  ----------------------------------------->
+
+    <div class="filter f-cen wid100 ">
         <div class="filter-container g16 f-evn">
-<!-- onclick="toggleButton('button2')"
+            <!-- onclick="toggleButton('button2')"
 onclick="toggleButton('button3')"
 onclick="toggleButton('button4')"
 onclick="toggleButton('button5')"
@@ -82,6 +150,28 @@ onclick="toggleButton('button6')" -->
 
 
 
+    <!------------------------------- filter end  ----------------------------------------->
+
+    <!------------------------------- filter mobile start  ----------------------------------------->
+
+    <div class="filter-mobile" id="filter-mobile2">
+        <ul class="f-cen f-col g12">
+            <button type="button" class="filter-clothes btn b1 accessories2">Accessories</button>
+            <button type="button" class="filter-clothes btn b1 shorts2">Shorts</button>
+            <button type="button" class="filter-clothes btn shirts2">T-Shirts</button>
+            <button type="button" class="filter-clothes btn full-dress2">Full-dress</button>
+            <button type="button" class="filter-clothes btn bajamas2">Bajamas</button>
+            <button type="button" class="filter-clothes btn shoes2">Shoes</button>
+        </ul>
+
+    </div>
+
+
+    <!------------------------------- filter mobile end  ----------------------------------------->
+
+    <!------------------------------- container start  ----------------------------------------->
+
+
     <div class="container f-cen g40">
 
 
@@ -89,36 +179,39 @@ onclick="toggleButton('button6')" -->
         <!--------------------------------------1   ----------------------------------------------->
         <div class="cont f-ard g40 wid100">
 
+            <div class="mobile">
 
-            <div class="in-cont shirt">
-                <div class="card card1 ">
-                    <div class="front front1"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                <div class="in-cont shirt">
+                    <div class="card card1 ">
+                        <div class="front front1"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 250$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="250$">Get it now</button>
+
+                        </div>
+                    </div>
+                    <div class="drag drag1 f-cen f-col g24 p16">
+                        <h1>Sport shirt</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors1 f-cen g12 p12">
+                            <div class="color green" data-image="images/shirt1green.webp"></div>
+                            <div class="color white" data-image="images/shirt1white.webp"></div>
+                            <div class="color black" data-image="images/shirt1black.webp"></div>
+                            <div class="color gray" data-image="images/shirt1gray.webp"></div>
+                            <div class="color red" data-image="images/offer1.webp"></div>
+                            <div class="color deepblue" data-image="images/shirt1deepblue.webp"></div>
+                        </div>
+                        <button type="button" class="btn moreDetails moreDetails1">More details</button>
+                        <button type="button" class="dragbtn dragbtn1"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
                 </div>
-                <div class="drag drag1 f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors1 f-cen g12 p12">
-                        <div class="color green" data-image="images/shirt1green.webp"></div>
-                        <div class="color white" data-image="images/shirt1white.webp"></div>
-                        <div class="color black" data-image="images/shirt1black.webp"></div>
-                        <div class="color gray" data-image="images/shirt1gray.webp"></div>
-                        <div class="color red" data-image="images/offer1.webp"></div>
-                        <div class="color deepblue" data-image="images/shirt1deepblue.webp"></div>
-                    </div>
-                    <button type="button" class="btn moreDetails moreDetails1">More details</button>
-                    <button type="button" class="dragbtn dragbtn1"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
+
             </div>
-
-
 
 
 
@@ -127,33 +220,35 @@ onclick="toggleButton('button6')" -->
 
 
 
+            <div class="mobile">
+                <div class="in-cont full">
+                    <div class="card card2 ">
+                        <div class="front2 front"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 450$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="450$">Get it now</button>
 
-            <div class="in-cont full">
-                <div class="card card2 ">
-                    <div class="front2 front"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                        </div>
+                    </div>
+                    <div class="drag2 drag f-cen f-col g24 p16">
+                        <h1>Full Sport clothes</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors2 f-cen g12 p12">
+                            <div class="color gray" data-image="images/full1.webp"></div>
+                            <div class="color black" data-image="images/full2.webp"></div>
+                            <div class="color deepblue" data-image="images/full3.webp"></div>
+                        </div>
+                        <button type="button" class="btn moreDetails2 moreDetails">More details</button>
+                        <button type="button" class="dragbtn2 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
                 </div>
-                <div class="drag2 drag f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors2 f-cen g12 p12">
-                        <div class="color gray" data-image="images/full1.webp"></div>
-                        <div class="color black" data-image="images/full2.webp"></div>
-                        <div class="color deepblue" data-image="images/full3.webp"></div>
-                    </div>
-                    <button type="button" class="btn moreDetails2 moreDetails">More details</button>
-                    <button type="button" class="dragbtn2 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
+
             </div>
-
-
 
         </div>
 
@@ -165,71 +260,75 @@ onclick="toggleButton('button6')" -->
 
         <div class="cont f-ard g40 wid100">
 
+            <div class="mobile">
+                <div class="in-cont accesoars">
+                    <div class="card card3">
+                        <div class="front front3"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 350$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="350$">Get it now</button>
 
-            <div class="in-cont accesoars">
-                <div class="card card3">
-                    <div class="front front3"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                        </div>
+                    </div>
+                    <div class="drag drag3 f-cen f-col g24 p16">
+                        <h1>Sport bag</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors3 f-cen g12 p12">
+                            <div class="color black" data-image="images/bag1black.webp"></div>
+                            <div class="color gray" data-image="images/bag1gray.webp"></div>
+                        </div>
+                        <button type="button" class="btn moreDetails moreDetails3">More details</button>
+                        <button type="button" class="dragbtn dragbtn3"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
                 </div>
-                <div class="drag drag3 f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors3 f-cen g12 p12">
-                        <div class="color black" data-image="images/bag1black.webp"></div>
-                        <div class="color gray" data-image="images/bag1gray.webp"></div>
-                    </div>
-                    <button type="button" class="btn moreDetails moreDetails3">More details</button>
-                    <button type="button" class="dragbtn dragbtn3"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
+
+
+
             </div>
-
-
-
-
 
             <!-------------------------------------- 4 ----------------------------------------------->
 
 
 
 
+            <div class="mobile">
+                <div class="in-cont accesoars">
+                    <div class="card card4">
+                        <div class="front4 front"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 100$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="100$">Get it now</button>
 
-            <div class="in-cont accesoars">
-                <div class="card card4">
-                    <div class="front4 front"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                        </div>
                     </div>
-                </div>
-                <div class="drag4 drag f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors4 f-cen g12 p12">
-                        <div class="color gray" data-image="images/bag2gray.webp"></div>
-                        <div class="color black" data-image="images/bag2black.webp"></div>
-                        <div class="color red" data-image="images/bag2red.webp"></div>
-                        <div class="color blue" data-image="images/bag2blue.webp"></div>
+                    <div class="drag4 drag f-cen f-col g24 p16">
+                        <h1>Sport bag</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors4 f-cen g12 p12">
+                            <div class="color gray" data-image="images/bag2gray.webp"></div>
+                            <div class="color black" data-image="images/bag2black.webp"></div>
+                            <div class="color red" data-image="images/bag2red.webp"></div>
+                            <div class="color blue" data-image="images/bag2blue.webp"></div>
 
+                        </div>
+                        <button type="button" class="btn moreDetails4 moreDetails">More details</button>
+                        <button type="button" class="dragbtn4 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
-                    <button type="button" class="btn moreDetails4 moreDetails">More details</button>
-                    <button type="button" class="dragbtn4 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
+
                 </div>
+
 
             </div>
-
-
-
         </div>
 
 
@@ -242,69 +341,73 @@ onclick="toggleButton('button6')" -->
 
         <div class="cont f-ard g40 wid100">
 
+            <div class="mobile">
+                <div class="in-cont begama">
+                    <div class="card card5">
+                        <div class="front front5"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 300$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="300$">Get it now</button>
 
-            <div class="in-cont begama">
-                <div class="card card5">
-                    <div class="front front5"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                        </div>
+                    </div>
+                    <div class="drag drag5 f-cen f-col g24 p16">
+                        <h1>Sport begama</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors5 f-cen g12 p12">
+                            <div class="color black" data-image="images/begama1black.webp"></div>
+                            <div class="color deepblue" data-image="images/begama1deepblue.webp"></div>
+                            <div class="color white" data-image="images/begama1white.webp"></div>
+                        </div>
+                        <button type="button" class="btn moreDetails moreDetails5">More details</button>
+                        <button type="button" class="dragbtn dragbtn5"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
                 </div>
-                <div class="drag drag5 f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors5 f-cen g12 p12">
-                        <div class="color black" data-image="images/begama1black.webp"></div>
-                        <div class="color deepblue" data-image="images/begama1deepblue.webp"></div>
-                        <div class="color white" data-image="images/begama1white.webp"></div>
-                    </div>
-                    <button type="button" class="btn moreDetails moreDetails5">More details</button>
-                    <button type="button" class="dragbtn dragbtn5"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
+
+
+
             </div>
-
-
-
-
 
             <!-------------------------------------- 6 ----------------------------------------------->
 
 
 
 
+            <div class="mobile">
+                <div class="in-cont begama">
+                    <div class="card card6">
+                        <div class="front6 front"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 400$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="400$">Get it now</button>
 
-            <div class="in-cont begama">
-                <div class="card card6">
-                    <div class="front6 front"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                        </div>
+                    </div>
+                    <div class="drag6 drag f-cen f-col g24 p16">
+                        <h1>Sport begama</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors6 f-cen g12 p12">
+                            <div class="color black" data-image="images/begama2black.webp"></div>
+                            <div class="color deepblue" data-image="images/begama2deepblue.webp"></div>
+                            <div class="color white" data-image="images/begama2white.webp"></div>
+                        </div>
+                        <button type="button" class="btn moreDetails6 moreDetails">More details</button>
+                        <button type="button" class="dragbtn6 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
                 </div>
-                <div class="drag6 drag f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors6 f-cen g12 p12">
-                        <div class="color black" data-image="images/begama2black.webp"></div>
-                        <div class="color deepblue" data-image="images/begama2deepblue.webp"></div>
-                        <div class="color white" data-image="images/begama2white.webp"></div>
-                    </div>
-                    <button type="button" class="btn moreDetails6 moreDetails">More details</button>
-                    <button type="button" class="dragbtn6 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
+
+
             </div>
-
-
-
         </div>
 
 
@@ -316,71 +419,75 @@ onclick="toggleButton('button6')" -->
 
 
         <div class="cont f-ard g40 wid100">
+            <div class="mobile">
 
+                <div class="in-cont begama">
+                    <div class="card card7">
+                        <div class="front front7"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 340$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="340$">Get it now</button>
 
-            <div class="in-cont begama">
-                <div class="card card7">
-                    <div class="front front7"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                        </div>
+                    </div>
+                    <div class="drag drag7 f-cen f-col g24 p16">
+                        <h1>Sport begama</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors7 f-cen g12 p12">
+                            <div class="color black" data-image="images/begama3black.webp"></div>
+                            <div class="color deepblue" data-image="images/begama3deepblue.webp"></div>
+                            <div class="color white" data-image="images/begama3white.webp"></div>
+                        </div>
+                        <button type="button" class="btn moreDetails moreDetails7">More details</button>
+                        <button type="button" class="dragbtn dragbtn7"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
                 </div>
-                <div class="drag drag7 f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors7 f-cen g12 p12">
-                        <div class="color black" data-image="images/begama3black.webp"></div>
-                        <div class="color deepblue" data-image="images/begama3deepblue.webp"></div>
-                        <div class="color white" data-image="images/begama3white.webp"></div>
-                    </div>
-                    <button type="button" class="btn moreDetails moreDetails7">More details</button>
-                    <button type="button" class="dragbtn dragbtn7"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
+
+
+
             </div>
-
-
-
-
 
             <!-------------------------------------- 8----------------------------------------------->
 
 
 
 
+            <div class="mobile">
+                <div class="in-cont accesoars">
+                    <div class="card card8">
+                        <div class="front8 front"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 200$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="200$">Get it now</button>
 
-            <div class="in-cont accesoars">
-                <div class="card card8">
-                    <div class="front8 front"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                        </div>
+                    </div>
+                    <div class="drag8 drag f-cen f-col g24 p16">
+                        <h1>Sport bottle</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors8 f-cen g12 p12">
+                            <div class="color black" data-image="images/bottle1black.webp"></div>
+                            <div class="color blue" data-image="images/bottle1blue.webp"></div>
+                            <div class="color gray" data-image="images/bottle1gray.webp"></div>
+                            <div class="color green" data-image="images/bottle1green.webp"></div>
+
+                        </div>
+                        <button type="button" class="btn moreDetails8 moreDetails">More details</button>
+                        <button type="button" class="dragbtn8 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
                 </div>
-                <div class="drag8 drag f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors8 f-cen g12 p12">
-                        <div class="color black" data-image="images/bottle1black.webp"></div>
-                        <div class="color blue" data-image="images/bottle1blue.webp"></div>
-                        <div class="color gray" data-image="images/bottle1gray.webp"></div>
-                        <div class="color green" data-image="images/bottle1green.webp"></div>
 
-                    </div>
-                    <button type="button" class="btn moreDetails8 moreDetails">More details</button>
-                    <button type="button" class="dragbtn8 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
             </div>
-
-
 
         </div>
 
@@ -390,70 +497,74 @@ onclick="toggleButton('button6')" -->
         <!--------------------------------------9  ----------------------------------------------->
         <div class="cont f-ard g40 wid100">
 
+            <div class="mobile">
+                <div class="in-cont accesoars">
+                    <div class="card card9">
+                        <div class="front front9"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 200$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="200$">Get it now</button>
 
-            <div class="in-cont accesoars">
-                <div class="card card9">
-                    <div class="front front9"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                        </div>
+                    </div>
+                    <div class="drag drag9 f-cen f-col g24 p16">
+                        <h1>Sport bottle</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors9 f-cen g12 p12">
+                            <div class="color blue" data-image="images/bottle2blue.webp"></div>
+                            <div class="color black" data-image="images/bottle2black.webp"></div>
+                            <div class="color gray" data-image="images/bottle2gray.webp"></div>
+                        </div>
+                        <button type="button" class="btn moreDetails moreDetails9">More details</button>
+                        <button type="button" class="dragbtn dragbtn9"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
                 </div>
-                <div class="drag drag9 f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors9 f-cen g12 p12">
-                        <div class="color blue" data-image="images/bottle2blue.webp"></div>
-                        <div class="color black" data-image="images/bottle2black.webp"></div>
-                        <div class="color gray" data-image="images/bottle2gray.webp"></div>
-                    </div>
-                    <button type="button" class="btn moreDetails moreDetails9">More details</button>
-                    <button type="button" class="dragbtn dragbtn9"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
+
+
+
             </div>
-
-
-
-
 
             <!-------------------------------------- 10 ----------------------------------------------->
 
 
 
 
+            <div class="mobile">
+                <div class="in-cont shirt">
+                    <div class="card card10">
+                        <div class="front10 front"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 300$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="300$">Get it now</button>
 
-            <div class="in-cont shirt">
-                <div class="card card10">
-                    <div class="front10 front"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                        </div>
+                    </div>
+                    <div class="drag10 drag f-cen f-col g24 p16">
+                        <h1>Sport shirt</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors10 f-cen g12 p12">
+                            <div class="color gray" data-image="images/shirt2gray.webp"></div>
+                            <div class="color black" data-image="images/shirt2black.webp"></div>
+                            <div class="color red" data-image="images/shirt2red.webp"></div>
+                            <div class="color white" data-image="images/shirt2white.webp"></div>
+                            <div class="color deepblue" data-image="images/shirt2deepblue.webp"></div>
+                        </div>
+                        <button type="button" class="btn moreDetails10 moreDetails">More details</button>
+                        <button type="button" class="dragbtn10 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
                 </div>
-                <div class="drag10 drag f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors10 f-cen g12 p12">
-                        <div class="color gray" data-image="images/shirt2gray.webp"></div>
-                        <div class="color black" data-image="images/shirt2black.webp"></div>
-                        <div class="color red" data-image="images/shirt2red.webp"></div>
-                        <div class="color white" data-image="images/shirt2white.webp"></div>
-                        <div class="color deepblue" data-image="images/shirt2deepblue.webp"></div>
-                    </div>
-                    <button type="button" class="btn moreDetails10 moreDetails">More details</button>
-                    <button type="button" class="dragbtn10 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
+
             </div>
-
-
 
         </div>
 
@@ -464,33 +575,35 @@ onclick="toggleButton('button6')" -->
 
 
         <div class="cont f-ard g40 wid100">
+            <div class="mobile">
 
+                <div class="in-cont shose">
+                    <div class="card card11">
+                        <div class="front front11"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 240$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="240$">Get it now</button>
 
-            <div class="in-cont shose">
-                <div class="card card11">
-                    <div class="front front11"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                        </div>
+                    </div>
+                    <div class="drag drag11 f-cen f-col g24 p16">
+                        <h1>Sport shose</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors11 f-cen g12 p12">
+                            <div class="color blue" data-image="images/shoes1blue.webp"></div>
+                            <div class="color red" data-image="images/shoes1red.webp"></div>
+                        </div>
+                        <button type="button" class="btn moreDetails moreDetails11">More details</button>
+                        <button type="button" class="dragbtn dragbtn11"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
                 </div>
-                <div class="drag drag11 f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors11 f-cen g12 p12">
-                        <div class="color blue" data-image="images/shoes1blue.webp"></div>
-                        <div class="color red" data-image="images/shoes1red.webp"></div>
-                    </div>
-                    <button type="button" class="btn moreDetails moreDetails11">More details</button>
-                    <button type="button" class="dragbtn dragbtn11"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
+
             </div>
-
-
 
 
 
@@ -499,33 +612,35 @@ onclick="toggleButton('button6')" -->
 
 
 
+            <div class="mobile">
+                <div class="in-cont shose">
+                    <div class="card card12">
+                        <div class="front12 front"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 250$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="250$">Get it now</button>
 
-            <div class="in-cont shose">
-                <div class="card card12">
-                    <div class="front12 front"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                        </div>
+                    </div>
+                    <div class="drag12 drag f-cen f-col g24 p16">
+                        <h1>Sport shose</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors12 f-cen g12 p12">
+                            <div class="color orange" data-image="images/shoes2orange.webp"></div>
+                            <div class="color beige" data-image="images/shoes2baig.webp"></div>
+
+                        </div>
+                        <button type="button" class="btn moreDetails12 moreDetails">More details</button>
+                        <button type="button" class="dragbtn12 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
                 </div>
-                <div class="drag12 drag f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors12 f-cen g12 p12">
-                        <div class="color orange" data-image="images/shoes2orange.webp"></div>
-                        <div class="color beige" data-image="images/shoes2baig.webp"></div>
 
-                    </div>
-                    <button type="button" class="btn moreDetails12 moreDetails">More details</button>
-                    <button type="button" class="dragbtn12 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
             </div>
-
-
 
         </div>
 
@@ -539,33 +654,35 @@ onclick="toggleButton('button6')" -->
 
         <div class="cont f-ard g40 wid100">
 
+            <div class="mobile">
+                <div class="in-cont shose">
+                    <div class="card card13">
+                        <div class="front front13"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 350$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="350$">Get it now</button>
 
-            <div class="in-cont shose">
-                <div class="card card13">
-                    <div class="front front13"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                        </div>
+                    </div>
+                    <div class="drag drag13 f-cen f-col g24 p16">
+                        <h1>Sport shose</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors13 f-cen g12 p12">
+                            <div class="color black" data-image="images/shoes3black.webp"></div>
+                            <div class="color orange" data-image="images/shoes3orange.webp"></div>
+                        </div>
+                        <button type="button" class="btn moreDetails moreDetails13">More details</button>
+                        <button type="button" class="dragbtn dragbtn13"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
                 </div>
-                <div class="drag drag13 f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors13 f-cen g12 p12">
-                        <div class="color black" data-image="images/shoes3black.webp"></div>
-                        <div class="color orange" data-image="images/shoes3orange.webp"></div>
-                    </div>
-                    <button type="button" class="btn moreDetails moreDetails13">More details</button>
-                    <button type="button" class="dragbtn dragbtn13"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
+
+
             </div>
-
-
-
 
 
             <!-------------------------------------- 14 ----------------------------------------------->
@@ -573,33 +690,34 @@ onclick="toggleButton('button6')" -->
 
 
 
+            <div class="mobile">
+                <div class="in-cont shose">
+                    <div class="card card14">
+                        <div class="front14 front"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 400$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="400$">Get it now</button>
+                        </div>
+                    </div>
+                    <div class="drag14 drag f-cen f-col g24 p16">
+                        <h1>Sport shose</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors14 f-cen g12 p12">
+                            <div class="color gray" data-image="images/shoes4gray.webp"></div>
+                            <div class="color deepblue" data-image="images/shoes4deepblue.webp"></div>
+                            <div class="color black" data-image="images/shoes4black.webp"></div>
+                        </div>
+                        <button type="button" class="btn moreDetails14 moreDetails">More details</button>
+                        <button type="button" class="dragbtn14 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
+                    </div>
+                </div>
 
-            <div class="in-cont shose">
-                <div class="card card14">
-                    <div class="front14 front"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
-                    </div>
-                </div>
-                <div class="drag14 drag f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors14 f-cen g12 p12">
-                        <div class="color gray" data-image="images/shoes4gray.webp"></div>
-                        <div class="color deepblue" data-image="images/shoes4deepblue.webp"></div>
-                        <div class="color black" data-image="images/shoes4black.webp"></div>
-                    </div>
-                    <button type="button" class="btn moreDetails14 moreDetails">More details</button>
-                    <button type="button" class="dragbtn14 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
             </div>
-
-
 
         </div>
 
@@ -613,34 +731,35 @@ onclick="toggleButton('button6')" -->
 
         <div class="cont f-ard g40 wid100 ">
 
+            <div class="mobile">
+                <div class="in-cont shose">
+                    <div class="card card15">
+                        <div class="front front15"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 300$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="300$">Get it now</button>
+                        </div>
+                    </div>
+                    <div class="drag drag15 f-cen f-col g24 p16">
+                        <h1>Sport shose</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors15 f-cen g12 p12">
+                            <div class="color black" data-image="images/shoes5black.webp"></div>
+                            <div class="color deepblue" data-image="images/shoes5deepblue.webp"></div>
+                            <div class="color gray" data-image="images/shoes5gray.webp"></div>
+                        </div>
+                        <button type="button" class="btn moreDetails moreDetails15">More details</button>
+                        <button type="button" class="dragbtn dragbtn15"><i class="fa-solid fa-arrow-left"></i></button>
+                    </div>
+                </div>
 
-            <div class="in-cont shose">
-                <div class="card card15">
-                    <div class="front front15"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
-                    </div>
-                </div>
-                <div class="drag drag15 f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors15 f-cen g12 p12">
-                        <div class="color black" data-image="images/shoes5black.webp"></div>
-                        <div class="color deepblue" data-image="images/shoes5deepblue.webp"></div>
-                        <div class="color gray" data-image="images/shoes5gray.webp"></div>
-                    </div>
-                    <button type="button" class="btn moreDetails moreDetails15">More details</button>
-                    <button type="button" class="dragbtn dragbtn15"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
+
             </div>
-
-
-
 
 
             <!-------------------------------------- 16----------------------------------------------->
@@ -648,54 +767,147 @@ onclick="toggleButton('button6')" -->
 
 
 
+            <div class="mobile">
+                <div class="in-cont short">
+                    <div class="card card16">
+                        <div class="front16 front"></div>
+                        <div class="back g32 p16">
+                            <h1 class="txt-cen txt-sub">Price : 340$</h1>
+                            <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Adipisci
+                                incidunt doloribus voluptatem, quos dolores quaerat.</p>
+                            <button type="button" class="btn" data-price="340$">Get it now</button>
+                        </div>
+                    </div>
+                    <div class="drag16 drag f-cen f-col g24 p16">
+                        <h1>Sport short</h1>
+                        <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
+                        <span class="fo-size24"> colors:</span>
+                        <div class="colors16 f-cen g12 p12">
+                            <div class="color black" data-image="images/shortblack.webp"></div>
+                            <div class="color deepblue" data-image="images/shortdeepblue.webp"></div>
+                            <div class="color orange" data-image="images/shortorange.webp"></div>
+                            <div class="color white" data-image="images/shortwhite.webp"></div>
 
-            <div class="in-cont short">
-                <div class="card card16">
-                    <div class="front16 front"></div>
-                    <div class="back g32 p16">
-                        <h1 class="txt-cen txt-sub">Price : 250$</h1>
-                        <p class="txt-cen txt-sub fo-size20">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Adipisci
-                            incidunt doloribus voluptatem, quos dolores quaerat.</p>
-                        <a href="" class="btn">Get it now</a>
+                        </div>
+                        <button type="button" class="btn moreDetails16 moreDetails">More details</button>
+                        <button type="button" class="dragbtn16 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
                     </div>
                 </div>
-                <div class="drag16 drag f-cen f-col g20 p16">
-                    <h1>Sport shirt</h1>
-                    <p class="fo-size20">Lorem ipsum dolor sit amet.</p>
-                    <span class="fo-size24"> colors:</span>
-                    <div class="colors16 f-cen g12 p12">
-                        <div class="color black" data-image="images/shortblack.webp"></div>
-                        <div class="color deepblue" data-image="images/shortdeepblue.webp"></div>
-                        <div class="color orange" data-image="images/shortorange.webp"></div>
-                        <div class="color white" data-image="images/shortwhite.webp"></div>
 
-                    </div>
-                    <button type="button" class="btn moreDetails16 moreDetails">More details</button>
-                    <button type="button" class="dragbtn16 dragbtn"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
+
             </div>
-
-
-
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
     </div>
 
 
+    <!------------------------------- container end  ----------------------------------------->
 
+
+    <!------------------------------- order start  ----------------------------------------->
+
+
+    <div class="order">
+
+        <div class="info f-cen ">
+            <i class="fa-solid fa-2x fa-close"></i>
+            <h1 class="txt-cen wid100">Get your order</h1>
+            <form action="index.html" method="get" id="myForm" class=" f-start f-col g16">
+                <div class="input-field">
+                    <span id="firstname-span"></span>
+                    <input type="text" name="firstname" id="firstname" tabindex="1" required autofocus
+                        placeholder="First Name">
+                </div>
+
+                <div class="input-field">
+                    <span id="lastname-span"></span>
+                    <input type="text" name="lastname" id="lastname" tabindex="2" required placeholder="Last Name">
+                </div>
+
+                <div class="input-field">
+                    <span id="phone-span"></span>
+                    <input type="tel" name="phone" id="phone" tabindex="3" required placeholder="Phone Number">
+                </div>
+
+                <div class="input-field">
+                    <span id="email-span"></span>
+                    <input type="email" name="email" id="email" tabindex="4" required placeholder="E-mail">
+                </div>
+
+                <div class="input-field f-cen g20">
+                    <label for="company">Choose a Transform company</label>
+                    <select name="company" id="company" required tabindex="5">
+                        <option value="tadmous" selected>Kadmous</option>
+                        <option value="taram">Haram</option>
+                        <option value="tourwada">Tourwada</option>
+                        <option value="tourwada">Tourwada</option>
+                    </select>
+                </div>
+                <div class="input-field f-cen g20">
+                    <label for="pay">Choose how you want to pay</label>
+                    <select name="pay" id="pay" tabindex="6" required>
+                        <option value="cash" selected>Cash</option>
+                        <option value="bimo">Bimo Bank</option>
+                        <option value="islamic">Islamic Bank</option>
+                        <option value="barakeh">Barakeh Bank</option>
+                    </select>
+                </div>
+
+                <div class="input-field f-cen g20">
+                    <label for="city">Choose the city you want to get your ordre in</label>
+                    <select name="city" id="city" tabindex="7" required>
+                        <option value="aleppo">Aleppo</option>
+                        <option value="damascus">Damascus</option>
+                        <option value="hama" selected>Hama</option>
+                        <option value="homs">Homs</option>
+                        <option value="daraa">Daraa</option>
+                        <option value="raqa">Raqa</option>
+                        <option value="edlib">Edlib</option>
+                        <option value="tartous">Tartous</option>
+                        <option value="latakia">Latakia</option>
+                        <option value="diralzour">DirAlzour</option>
+                    </select>
+                </div>
+                <div class="input-field f-cen g20">
+                    <label for="size">Choose the size you want to get</label>
+                    <select name="size" id="size" tabindex="size" required>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+
+                <div class="input-field">
+                    <textarea name="" id="note" cols="30" rows="5" tabindex="9"
+                        placeholder="Add a note with your order" maxlength="100"></textarea>
+                    <p id="text-length">0 / 100</p>
+
+                </div>
+                <div class="input-field wid100 txt-cen f-cen">
+                    <button type="submit" class="btn wid100" tabindex="10">Send</button>
+                </div>
+            </form>
+            <div class="item">
+                <div class="card f-cen f-col">
+                    <div class="image1"></div>
+                    <h1>Price : 000$$</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!------------------------------- order end  ----------------------------------------->
 
 
 
@@ -755,6 +967,8 @@ onclick="toggleButton('button6')" -->
     <script src="scripts/products.js"></script>
     <script src="scripts/window.js"></script>
     <script src="scripts/productsFilter.js"></script>
+    <script src="scripts/order.js"></script>
+
 
 </body>
 
