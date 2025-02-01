@@ -54,3 +54,25 @@ function startCount(el) {
     }, 2000 / goal);
 }
 /////////////////////// counter end ////////////////////////////////////
+
+/////////////////////// allow-cookeis start ////////////////////////////////////
+
+
+const allow = document.querySelector('.allow-cookies');
+const button = document.getElementById('allow');
+const close = document.getElementById('close');
+
+function show() {
+    allow.classList.remove('hide');
+
+
+};
+setTimeout(show, 3000);
+
+button.onclick = () => {
+    allow.classList.add('hide');
+};
+close.onclick = () => {
+    allow.classList.add('hide');
+};
+/////////////////////// allow-cookeis end ////////////////////////////////////

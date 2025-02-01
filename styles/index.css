@@ -6,21 +6,72 @@ body {
 
 }
 
-/********************************* container start  ********************************/
 
-.container {
-    background: url(../images/bg3.jpg);
-    background-position: center;
+/* swiper-slide:nth-child(1){
+    background-image: url(../images/bg1.jpg);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    min-height: 30vh;
-    /* background-attachment: fixed; */
 }
 
-.container h1 {
-    margin-top: 140px;
+swiper-slide:nth-child(1){
+    background-image: url(../images/bg2.jpeg);
+} */
+.container-swiper {
+    margin-top: 121px;
+    min-height: 50vh !important;
+
+}
+
+.container-swiper swiper-slide {
+    width: 100%;
+    height: 50vh;
+}
+
+.container-swiper swiper-slide:nth-child(1) {
+    background-image: url(../images/bgEnd3.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container-swiper swiper-slide:nth-child(2) {
+    background-image: url(../images/bgEnd1.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container-swiper swiper-slide:nth-child(2) img {
+    width: 300px;
+    border-radius: 12px;
+
+}
+
+/* .container-swiper swiper-slide:nth-child(4) img{
+    width: 300px;
+    border-radius: 12px;
+    height: 50vh;   
+} */
+.container-swiper swiper-slide:nth-child(3) {
+    background-image: url(../images/bgEnd2.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container-swiper swiper-slide:nth-child(4) {
+    background-image: url(../images/bgEnd4.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/********************************* container start  ********************************/
+
+.container-swiper h1 {
     font-size: 40px;
-    background: linear-gradient(90deg, var(--sub2), #fdc412);
+    background: linear-gradient(90deg, var(--sub2), #b3ffec);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -28,11 +79,12 @@ body {
     font-family: subFont;
 }
 
+/* 
 .container .hello .hello-image img {
     width: 400px;
     border-radius: 12px;
 
-}
+} */
 
 /********************************* container end  ********************************/
 
@@ -265,6 +317,52 @@ body {
 
 /********************************* offers end  ********************************/
 
+/****************************  allow cookies start  ***********************************************/
+
+
+.allow-cookies {
+    position: fixed;
+    width: 100%;
+    color: var(--sub2);
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.allow-cookies h3 {
+    font-family: subFont;
+
+}
+
+.fa-close {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: var(--main);
+    font-size: 20px;
+    padding: 11px;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--sub2);
+}
+
+.fa-close:hover {
+    transform: scale(0.9);
+    background-color: var(--sub2);
+    color: var(--main);
+}
+
+.allow-cookies.hide {
+    display: none;
+    ;
+}
+
+/****************************  allow cookies end  ***********************************************/
+
+
+
 /********************************* happy customers start  ********************************/
 
 .happy-customer {
@@ -289,13 +387,13 @@ body {
 }
 
 .happy-customer .card p {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--sub);
 
 }
 
 .happy-customer .card {
-    width: 350px;
+    width: 300px;
     background-color: var(--main);
     box-shadow: 0 0 10px var(--sub), 0 0 10px var(--sub), 0 0 10px var(--sub);
     filter: drop-shadow(0 0 10px var(--sub));
@@ -306,11 +404,17 @@ body {
 
 .happy-customer .card i {
     color: goldenrod;
-    font-size: 30px;
+    font-size: 25px;
+}
+
+.happy-customer .card .customer-name img {
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1/1;
 }
 
 .happy-customer .card img {
-    width: 100%;
+    width: 80%;
     border-radius: 8px;
     box-shadow: 0 0 10px var(--sub);
 }

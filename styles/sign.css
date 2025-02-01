@@ -1,0 +1,283 @@
+body {
+    background-image: url(../images/bg5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+swiper-container {
+    width: 800px;
+}
+
+.container {
+    padding: 10px;
+}
+
+@media (max-width:800px) {
+    #btn-show:hover {
+        cursor: pointer;
+        color: var(--sha);
+    }
+
+    .signIn #go-back {
+        position: absolute;
+        background: none;
+        border: none;
+        width: 100px;
+        height: 30px;
+        color: var(--sub2);
+        cursor: pointer;
+        left: 2%;
+        bottom: 4%;
+        font-size: 20px;
+        box-shadow: 0px 0 30px var(--sha);
+        padding: 2px;
+        outline: none;
+        border-radius: 8px;
+        filter: drop-shadow(0 0 20px var(--sha));
+    }
+
+    .signIn {
+        z-index: 22;
+        position: relative;
+        background-size: cover;
+        background-position: right;
+        border-radius: 16px;
+        box-shadow: 0 0 25px var(--sub);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+        transform: scale(0);
+        width: 22em;
+    }
+
+    .signIn::before {
+        content: attr(data-back);
+        position: absolute;
+        background-color: transparent;
+        width: 100px;
+        height: 30px;
+        color: var(--sub2);
+        cursor: pointer;
+        left: 4%;
+        top: 5%;
+        font-size: 20px;
+        filter: drop-shadow(0 0 15px var(--sha));
+    }
+
+    .logIn {
+        width: 150px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 16px;
+    }
+
+    .input-field .remmber input {
+        width: auto;
+        padding: 0;
+    }
+
+    .input-field .remmber {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .input-field input {
+        padding: 8px;
+        width: 14em;
+        border-radius: 8px;
+        font-family: subFont;
+        font-size: 18px;
+        outline: none;
+        border: none;
+        background: none;
+        border-top: 2px solid var(--main);
+        border-bottom: 2px solid var(--sha);
+        color: var(--sub);
+        box-shadow: 0 0 10px var(--sha);
+        filter: drop-shadow(0 0 10px var(--sha));
+
+    }
+
+    .input-field input:hover {
+        border-bottom: 2px solid var(--sha);
+        box-shadow: 0 0 20px var(--sha);
+
+    }
+
+    ::placeholder {
+        font-family: subFont;
+        color: var(--sub2);
+    }
+
+    .signIn {
+        transform: scale(1);
+        display: flex;
+
+    }
+
+
+    .signIn {
+        display: flex;
+    }
+
+
+}
+
+
+@media (min-width:800px) {
+    #btn-show:hover {
+        cursor: pointer;
+        color: var(--sha);
+    }
+
+    .signIn {
+        display: flex;
+
+
+    }
+
+    .signIn {
+        z-index: 22;
+        position: relative;
+        width: 37.5em;
+        background-size: cover;
+        background-position: right;
+        border-radius: 16px;
+        box-shadow: 0 0 25px var(--sub);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+        transform: scale(1);
+    }
+
+    .signIn #go-back {
+        position: absolute;
+        background: none;
+        border: none;
+        width: 100px;
+        height: 30px;
+        color: var(--sub2);
+        cursor: pointer;
+        left: 5%;
+        top: 7%;
+        font-size: 20px;
+        box-shadow: 0px 0 30px var(--sha);
+        padding: 2px;
+        outline: none;
+        border-radius: 8px;
+        filter: drop-shadow(0 0 20px var(--sha));
+    }
+
+    .logIn {
+        width: 600px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 16px;
+    }
+
+    .input-field .remmber input {
+        width: auto;
+        padding: 0;
+    }
+
+    .input-field .remmber {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .input-field input {
+        padding: 8px;
+        width: 18.75em;
+        border-radius: 8px;
+        font-family: subFont;
+        font-size: 18px;
+        outline: none;
+        border: none;
+        background: none;
+        border-top: 2px solid var(--main);
+        border-bottom: 2px solid var(--sha);
+        color: var(--sub);
+        box-shadow: 0 0 10px var(--sha);
+        filter: drop-shadow(0 0 10px var(--sha));
+    }
+
+    .input-field input:hover {
+        border-bottom: 2px solid var(--sha);
+        box-shadow: 0 0 20px var(--sha);
+    }
+
+    ::placeholder {
+        font-family: subFont;
+        color: var(--sub2);
+    }
+
+    .signIn {
+        display: flex;
+    }
+
+}
+/******************* loading page start  **************************/
+
+.loading-page {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--sub2);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000000;
+}
+
+.load-container {
+    width: 300px;
+    height: 300px;
+
+}
+
+.load-card {
+    width: 100%;
+    height: 100%;
+}
+
+.load1 {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    border-top: 4px solid var(--sub);
+    animation-name: load;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-direction: normal;
+    animation-delay: 0s;
+}
+
+.load1 .load2 {
+    width: 80%;
+    height: 80%;
+    backface-visibility: hidden;
+    border-bottom: 4px solid var(--main);
+    border-radius: 50%;
+    animation-name: load;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-direction: normal;
+    animation-delay: 0.5s;
+} 
+@keyframes load {
+    0%{ transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}    
+}
+.loading-page.clear{
+    display: none;
+    transform: scale(0);
+}
+
+/******************* loading page end  **************************/

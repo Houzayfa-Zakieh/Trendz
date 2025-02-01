@@ -43,12 +43,6 @@ document.onclick = (event) => {
         }
         }
     }
-            if (event.target.id !== "filter-mobile" && event.target.id !== "filter-mobile2") {
-                if(document.getElementById('filter-mobile2').classList.contains('show')){
-                    document.getElementById('filter-mobile2').classList.remove('show');
-                };            
-        };
-
 };
 
 
@@ -63,3 +57,12 @@ btnSider.onclick = () => {
         link.classList.toggle('shows');
     });
 }
+
+
+
+/////////////////////////// loading page start /////////////////////////////// 
+setTimeout(()=>{
+    document.querySelector('.loading-page').classList.add('clear');
+
+},1500)
+/////////////////////////// loading page end /////////////////////////////// 

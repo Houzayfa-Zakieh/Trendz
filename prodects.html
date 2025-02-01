@@ -42,14 +42,14 @@
         <!------------------------------- header responsive start  ----------------------------------------->
         <div class="mobile-btns f-cen g24">
             <div class="icons f-cen g12">
-            <i class="fa-solid fa-filter" id="filter-mobile" title="Filter"></i>
-            <i class="fa-solid fa-search" id="search" title="Search"></i>
-        </div>
+                <i class="fa-solid fa-filter" id="filter-mobile" title="Filter"></i>
+                <i class="fa-solid fa-search" id="search" title="Search"></i>
+            </div>
             <div class="btnSider f-cen" id="btnSider">
                 <div class="oneLine" id="oneLine"></div>
             </div>
         </div>
-        
+
     </header>
     <!------------------------------- header end  ----------------------------------------->
     <div class="sider" id="sider">
@@ -103,17 +103,17 @@
     </div>
 
     <!------------------------------- donate end  ----------------------------------------->
-  <!------------------------------- search start  ----------------------------------------->
+    <!------------------------------- search start  ----------------------------------------->
 
-  <div class="search">
-    <div class="search-content f-cen f-col g12">
-        <i class="fa-solid fa-2x fa-close"></i>
-        <input type="search" name="search" id="search" placeholder="Search...">
-        <button type="submit" class="btn">Search</button>
+    <div class="search">
+        <div class="search-content f-cen f-col g12">
+            <i class="fa-solid fa-2x fa-close"></i>
+            <input type="search" name="search" id="search" placeholder="Search...">
+            <button type="submit" class="btn">Search</button>
+        </div>
     </div>
-</div>
 
-<!------------------------------- search end  ----------------------------------------->
+    <!------------------------------- search end  ----------------------------------------->
 
 
 
@@ -806,6 +806,24 @@ onclick="toggleButton('button6')" -->
     <!------------------------------- container end  ----------------------------------------->
 
 
+    <!------------------------------- loading page start ------------------------------->
+    
+    <div class="loading-page container f-cen">
+        <div class="load-container f-cen">
+            <div class="load-card f-cen">
+                <div class="load1 f-cen">
+                    <div class="load2">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------- loading page end ------------------------------->
+
+
     <!------------------------------- order start  ----------------------------------------->
 
 
@@ -835,66 +853,70 @@ onclick="toggleButton('button6')" -->
                     <span id="email-span"></span>
                     <input type="email" name="email" id="email" tabindex="4" required placeholder="E-mail">
                 </div>
+                <div class="mobile-order">
+                    <div class="input-field f-cen g20">
+                        <!-- <label for="company">Choose a Transform company</label> -->
+                        <select name="company" id="company" required tabindex="5">
+                            <option value="transform" selected>Transform</option>
+                            <option value="tadmous">Kadmous</option>
+                            <option value="taram">Haram</option>
+                            <option value="tourwada">Tourwada</option>
+                            <option value="tourwada">Tourwada</option>
+                        </select>
+                    </div>
+                    <div class="input-field f-cen g20">
+                        <!-- <label for="pay">Choose how you want to pay</label> -->
+                        <select name="pay" id="pay" tabindex="6" required>
+                            <option value="pay" selected>Pay</option>
+                            <option value="cash">Cash</option>
+                            <option value="bimo">Bimo Bank</option>
+                            <option value="islamic">Islamic Bank</option>
+                            <option value="barakeh">Barakeh Bank</option>
+                        </select>
+                    </div>
 
-                <div class="input-field f-cen g20">
-                    <label for="company">Choose a Transform company</label>
-                    <select name="company" id="company" required tabindex="5">
-                        <option value="tadmous" selected>Kadmous</option>
-                        <option value="taram">Haram</option>
-                        <option value="tourwada">Tourwada</option>
-                        <option value="tourwada">Tourwada</option>
-                    </select>
+                    <div class="input-field f-cen g20">
+                        <!-- <label for="city">Choose the city you want to get your ordre in</label> -->
+                        <select name="city" id="city" tabindex="7" required>
+                            <option value="city" selected>City</option>
+                            <option value="aleppo">Aleppo</option>
+                            <option value="damascus">Damascus</option>
+                            <option value="hama">Hama</option>
+                            <option value="homs">Homs</option>
+                            <option value="daraa">Daraa</option>
+                            <option value="raqa">Raqa</option>
+                            <option value="edlib">Edlib</option>
+                            <option value="tartous">Tartous</option>
+                            <option value="latakia">Latakia</option>
+                            <option value="diralzour">DirAlzour</option>
+                        </select>
+                    </div>
+                    <div class="input-field f-cen g20">
+                        <!-- <label for="size">Choose the size you want to get</label> -->
+                        <select name="size" id="size" tabindex="size" required>
+                            <option value="size">Size</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                            <option value="46">46</option>
+                            <option value="47">47</option>
+                            <option value="48">48</option>
+                            <option value="49">49</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="input-field f-cen g20">
-                    <label for="pay">Choose how you want to pay</label>
-                    <select name="pay" id="pay" tabindex="6" required>
-                        <option value="cash" selected>Cash</option>
-                        <option value="bimo">Bimo Bank</option>
-                        <option value="islamic">Islamic Bank</option>
-                        <option value="barakeh">Barakeh Bank</option>
-                    </select>
-                </div>
-
-                <div class="input-field f-cen g20">
-                    <label for="city">Choose the city you want to get your ordre in</label>
-                    <select name="city" id="city" tabindex="7" required>
-                        <option value="aleppo">Aleppo</option>
-                        <option value="damascus">Damascus</option>
-                        <option value="hama" selected>Hama</option>
-                        <option value="homs">Homs</option>
-                        <option value="daraa">Daraa</option>
-                        <option value="raqa">Raqa</option>
-                        <option value="edlib">Edlib</option>
-                        <option value="tartous">Tartous</option>
-                        <option value="latakia">Latakia</option>
-                        <option value="diralzour">DirAlzour</option>
-                    </select>
-                </div>
-                <div class="input-field f-cen g20">
-                    <label for="size">Choose the size you want to get</label>
-                    <select name="size" id="size" tabindex="size" required>
-                        <option value="39">39</option>
-                        <option value="40">40</option>
-                        <option value="41">41</option>
-                        <option value="42">42</option>
-                        <option value="43">43</option>
-                        <option value="44">44</option>
-                        <option value="45">45</option>
-                        <option value="46">46</option>
-                        <option value="47">47</option>
-                        <option value="48">48</option>
-                        <option value="49">49</option>
-                        <option value="50">50</option>
-                    </select>
-                </div>
-
                 <div class="input-field">
-                    <textarea name="" id="note" cols="30" rows="5" tabindex="9"
-                        placeholder="Add a note with your order" maxlength="100"></textarea>
+                    <textarea name="" id="note" cols="30" rows="5" tabindex="9" placeholder="Add a note with your order"
+                        maxlength="100"></textarea>
                     <p id="text-length">0 / 100</p>
 
                 </div>
-                <div class="input-field wid100 txt-cen f-cen">
+                <div class="input-field wid100 txt-cen f-cen" id="send">
                     <button type="submit" class="btn wid100" tabindex="10">Send</button>
                 </div>
             </form>

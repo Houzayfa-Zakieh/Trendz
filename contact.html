@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/navs.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/v4-shims.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/5cd3c2f996.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/logo.jpg">
     <title>Trendz-Home</title>
@@ -16,7 +19,7 @@
     <!------------------------------- header start  ----------------------------------------->
     <i class="fa-solid fa-arrow-up"></i>
 
-    <header class="f-ard">
+    <header class="f-bet">
         <marquee>
             <p class="txt-main wid100">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio ipsam obcaecati deleniti saepe
@@ -34,9 +37,50 @@
             <a href="contact.html"><i class="fa-solid fa-phone"></i>Contact us</a>
         </nav>
         <a href="sign.html" class="btn"><i class="fa-solid fa-sign-in"></i>Sign in</a>
-    </header>
 
+
+        <!------------------------------- header responsive start  ----------------------------------------->
+        <div class="btnSider f-cen" id="btnSider">
+            <div class="oneLine" id="oneLine"></div>
+        </div>
+
+
+    </header>
     <!------------------------------- header end  ----------------------------------------->
+    <div class="sider" id="sider">
+        <div class="siderImage f-cen f-col">
+            <img src="images/logo.jpg" alt="logo">
+            <h3 class="txt-sub txt-cen"><span class="txt-sub2 fo-size30">Trendz</span> <br>
+                Fashion & Clothing Company</h3>
+        </div>
+
+        <ul>
+
+            <a href="index.html">
+                <li><i class="fa-solid fa-home"></i>Home</li>
+            </a>
+            <a href="prodects.html">
+                <li><i class="fa-solid fa-shirt"></i>Products</li>
+            </a>
+            <a href="offers.html">
+                <li><i class="fa-solid fa-percent"></i>Offers</li>
+            </a>
+            <a href="about.html">
+                <li><i class="fa-solid fa-people-group"></i>About us</li>
+            </a>
+            <a href="contact.html">
+                <li><i class="fa-solid fa-phone"></i>Contact us</li>
+            </a>
+            <a href="sign.html">
+                <li><i class="fa-solid fa-sign-in"></i>Sign in</li>
+            </a>
+
+        </ul>
+
+    </div>
+
+
+    <!------------------------------- header responsive end  ----------------------------------------->
 
 
 
@@ -53,8 +97,80 @@
 
     <!------------------------------- donate end  ----------------------------------------->
 
+     <!---------------------  container start  ----------------------------------->
+
+     <div class="container f-cen">
+        <section class="contact">
+            <h1>Contact Us!</h1>
+            <div>
+
+                <form action="index.html" method="get" id="myForm">
+                    <div class="input-box">
+                        <div class="input-field field">
+                            <span id="firstname-span"></span>
+                            <input type="text" placeholder="Full Name" id="firstname" tabindex="1" class="item"
+                                autocomplete="off">
+                            <div class="input-field field">
+                                <span id="phone-span"></span>
+                                <input type="tel" placeholder="Phone Number" id="phone" tabindex="3" class="item"
+                                    autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="input-field field">
+                            <span id="email-span"></span>
+                            <input type="email" placeholder="Email Address" id="email" tabindex="2" class="item"
+                                autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="textarea-field field">
+                        <span id="description-span"></span>
+                        <textarea name="" id="description" cols="30" rows="5" tabindex="4" placeholder="Your Message"
+                            class="item" autocomplete="off" maxlength="200"></textarea>
+                        <p id="text-length" class="fo-size30">0 / 200</p>
+
+                    </div>
+                    <button type="submit" id="send" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <div class="dialog f-cen p16" id="dialog">
+            <div class="box bg-w p8 r8 f-cen g8">
+                <h2 class="txt-main">Your message has been sent successfully</h2>
+                <button type="submit" id="Ok" class="btn">Ok</button>
+            </div>
+        </div>
+    </div>
 
 
+
+
+
+
+    <!---------------------  container end  ----------------------------------->
+
+
+<!------------------------------- loading page start ------------------------------->
+    
+<div class="loading-page container f-cen">
+    <div class="load-container f-cen">
+        <div class="load-card f-cen">
+            <div class="load1 f-cen">
+                <div class="load2">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<!------------------------------- loading page end ------------------------------->
+
+
+
+
+    
 
     
     <!-------------------------------  footer start  ------------------------------------------------->
@@ -105,8 +221,7 @@
 
 
 
-
-    <script src="scripts/index.js"></script>
+    <script src="scripts/contact.js"></script>
     <script src="scripts/window.js"></script>
 </body>
 

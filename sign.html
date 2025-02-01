@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/sign.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/v4-shims.min.css">
+    <script src="https://kit.fontawesome.com/5cd3c2f996.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/logo.jpg">
+    <title>Trendz-Sign-in</title>
+</head>
+
+<body>
+    <div class="container f-cen p16">
+        <swiper-container class="mySwiper" effect="cube" cube-effect-shadow="true" cube-effect-slide-shadows="true"
+            cube-effect-shadow-offset="20" cube-effect-shadow-scale="0.94">
+            <swiper-slide>
+                <form action="index.html" method="get" class="f-cen" id="myForm2">
+
+                    <div class="logIn f-cen f-col p24 g24">
+
+                        <h1>Sign In</h1>
+                        <div class="input-field">
+                            <span id="email-span2"></span>
+                            <input type="email" name="email2" id="email2" tabindex="1" required autofocus
+                                placeholder="E-mail">
+                        </div>
+
+                        <div class="input-field">
+                            <span id="password-span2"></span>
+                            <input type="password" name="password2" id="password2" required tabindex="2"
+                                placeholder="Password">
+                        </div>
+
+                        <div class="input-field">
+                            <div class="remmber g8">
+                                <input type="checkbox" name="remmber" id="remmber" tabindex="3">
+                                <label for="remmber">Remmber Me</label>
+                            </div>
+                            <div class="input-field ">
+                                <span class="fo-size24 txt-sub" id="btn-show">Don't have an account?</span>
+                                <button type="submit" class="btn">Sign In</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </swiper-slide>
+            <swiper-slide>
+                <form action="index.html" method="get" class="f-cen" id="myForm">
+
+                    <div class="signIn">
+                        <h1>Make your own accont</h1>
+                        <div class="input-field">
+                            <span id="firstname-span"></span>
+                            <input type="text" name="firstname" id="firstname" tabindex="1" required autofocus
+                                placeholder="First Name">
+                        </div>
+
+                        <div class="input-field">
+                            <span id="lastname-span"></span>
+                            <input type="text" name="lastname" id="lastname" tabindex="2" required
+                                placeholder="Last Name">
+                        </div>
+
+                        <div class="input-field">
+                            <span id="phone-span"></span>
+                            <input type="tel" name="phone" id="phone" tabindex="3" required placeholder="Phone Number">
+                        </div>
+
+                        <div class="input-field">
+                            <span id="email-span"></span>
+                            <input type="email" name="email" id="email" tabindex="4" required placeholder="E-mail">
+                        </div>
+
+                        <div class="input-field">
+                            <span id="password-span"></span>
+                            <input type="password" name="password" id="password" tabindex="5" required
+                                placeholder="Password">
+                        </div>
+
+                        <div class="input-field">
+                            <span id="confirm-span"></span>
+                            <input type="password" name="confirm" id="confirm" tabindex="6" required
+                                placeholder="Confirm Password">
+                        </div>
+
+                        <button type="submit" class="btn">Sign In</button>
+
+                        <button type="button" id="go-back">← Go Back</button>
+
+                    </div>
+                </form>
+
+            </swiper-slide>
+        </swiper-container>
+
+
+
+
+    </div>
+
+
+    <!------------------------------- loading page start ------------------------------->
+    
+    <div class="loading-page container f-cen">
+        <div class="load-container f-cen">
+            <div class="load-card f-cen">
+                <div class="load1 f-cen">
+                    <div class="load2">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------- loading page end ------------------------------->
+
+
+
+    <script src="scripts/sign.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+
+</html>

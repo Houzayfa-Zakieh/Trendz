@@ -448,3 +448,23 @@ window.addEventListener('keyup', (event) => {
 //         document.getElementById('filter-mobile2').classList.remove('show');
 //     };
 //  }}
+var sider = document.getElementById('sider');
+var btnSider = document.getElementById('btnSider');
+
+document.onclick = (event) => {
+    if (event.target.id !== "btnSider" && event.target.id !== "sider") {
+        if (btnSider.classList.contains('clickeds') && sider.classList.contains('shows')) {
+            btnSider.classList.remove('clickeds');
+            sider.classList.remove('shows');
+        if(document.getElementById('oneLine').classList.contains('hides')){
+            document.getElementById('oneLine').classList.remove('hides');
+        }
+        }
+    }
+            if (event.target.id !== "filter-mobile" && event.target.id !== "filter-mobile2") {
+                if(document.getElementById('filter-mobile2').classList.contains('show')){
+                    document.getElementById('filter-mobile2').classList.remove('show');
+                };            
+        };
+
+};

@@ -91,7 +91,12 @@
         cursor: pointer;
         transition: all 0.3s;
     }
-    
+    .drag p{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .drag.show {
         left: -180px;
         z-index: 33;
@@ -494,7 +499,12 @@
         backface-visibility: hidden;
         z-index: 222;
     }
-    
+    .drag p{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .front {
         background-color: var(--sub);
     }

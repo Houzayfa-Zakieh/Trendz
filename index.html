@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/navs.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/v4-shims.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/5cd3c2f996.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/logo.jpg">
     <title>Trendz-Home</title>
@@ -55,12 +56,24 @@
 
         <ul>
 
-            <a href="index.html"><li><i class="fa-solid fa-home"></i>Home</li></a>
-            <a href="prodects.html"><li><i class="fa-solid fa-shirt"></i>Products</li></a>
-            <a href="offers.html"><li><i class="fa-solid fa-percent"></i>Offers</li></a>
-            <a href="about.html"><li><i class="fa-solid fa-people-group"></i>About us</li></a>
-            <a href="contact.html"><li><i class="fa-solid fa-phone"></i>Contact us</li></a>
-            <a href="sign.html"><li><i class="fa-solid fa-sign-in"></i>Sign in</li></a>
+            <a href="index.html">
+                <li><i class="fa-solid fa-home"></i>Home</li>
+            </a>
+            <a href="prodects.html">
+                <li><i class="fa-solid fa-shirt"></i>Products</li>
+            </a>
+            <a href="offers.html">
+                <li><i class="fa-solid fa-percent"></i>Offers</li>
+            </a>
+            <a href="about.html">
+                <li><i class="fa-solid fa-people-group"></i>About us</li>
+            </a>
+            <a href="contact.html">
+                <li><i class="fa-solid fa-phone"></i>Contact us</li>
+            </a>
+            <a href="sign.html">
+                <li><i class="fa-solid fa-sign-in"></i>Sign in</li>
+            </a>
 
         </ul>
 
@@ -88,18 +101,50 @@
 
     <!------------------------------- container start  ----------------------------------------->
 
-    <div class="container f-cen f-col p16 g16">
-        <h1 class="txt-sub2 txt-cen wid100">Trendz Fashion & Clothing <br> Company</h1>
-        <div class="hello f-bet p12 g32">
-            <div class="hello-text f-cen f-col g16 p12">
-                <h2 class="fo-size30 txt-sub">Welcome to <span class="txt-sub2">Trendz</span> your sport life us with us
+    <div class="container-swiper">
+
+        <swiper-container class="mySwiper" effect="cube" grab-cursor="true" cube-effect-shadow="true"
+            cube-effect-slide-shadows="true" cube-effect-shadow-offset="20" cube-effect-shadow-scale="0.94"
+            autoplay-delay="2500" autoplay-disable-on-interaction="false">
+            <swiper-slide class="f-cen f-col g12">
+                <h1 class="txt-sub2 txt-cen wid100">Welcome to Trendz Fashion & Clothing <br> Company</h1>
+                <h2 class="fo-size24 txt-sub txt-cen">Welcome to <span class="txt-sub2">Trendz</span> your sport life us with us
                 </h2>
                 <a href="prodects.html" class="btn">Get start</a>
+            </swiper-slide>
+            <swiper-slide class="f-evn g40">
+                <div class="watch-last f-cen f-col g12">
+                    <h1 class="txt-sub2 txt-cen wid100">Look! <br> Our last products</h1>
+                    <a href="#last" class="btn">GO and watch <br>↓</a>
+                </div>
+                <!-- <img src="images/man.webp" alt="man wearing a sport clothes"> -->
+            </swiper-slide>
+            <swiper-slide class="f-evn g24">
+                <div class="watch-most f-cen f-col g12">
+                    <h1 class="txt-sub2 txt-cen wid100">Watch Our most sale products</h1>
+                    <a href="#most" class="btn">GO and watch <br>↓</a>
+                </div>
+                <!-- <img src="images/shopping.webp" alt="man wearing a sport clothes"> -->
+
+            </swiper-slide>
+            <swiper-slide class="f-evn g24">
+                <!-- <img src="images/man2.webp" alt="man wearing a sport clothes"> -->
+                <div class="watch-offers f-cen f-col g12">
+                    <h1 class="txt-sub2 txt-cen wid100">Have a look at our offers</h1>
+                    <a href="#offers" class="btn">GO and watch <br>↓</a>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+
+        <!-- 
+        <div class="hello f-bet p12 g32">
+            <div class="hello-text f-cen f-col g16 p12">
+                
             </div>
             <div class="hello-image">
                 <img src="images/bg11.jpg" alt="image">
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!------------------------------- container end  ----------------------------------------->
@@ -108,7 +153,7 @@
 
     <div class="all">
 
-        <div class="last f-cen f-col p20 g20">
+        <div class="last f-cen f-col p20 g20" id="last">
             <h1 class="f-cen">Check our <span>last</span> products</h1>
             <div class="cards f-evn p16 g32">
                 <div class="card f-cen f-col g16 p20">
@@ -140,7 +185,7 @@
 
 
         <!------------------------------- most sale start  ----------------------------------------->
-        <div class="most f-cen f-col p12 g20">
+        <div class="most f-cen f-col p12 g20" id="most">
             <h1 class="f-cen">Our <span>most</span> sale!</h1>
 
             <div class="cards f-evn p16 g32">
@@ -172,7 +217,7 @@
 
 
         <!------------------------------- offers start  ----------------------------------------->
-        <div class="offers f-cen f-col p12 g20">
+        <div class="offers f-cen f-col p12 g20" id="offers">
             <h1 class="f-cen">Harry up and catch our <span>offers</span></h1>
 
             <div class="cards f-evn p16 g32">
@@ -202,54 +247,79 @@
 
         <!------------------------------- offers end  ----------------------------------------->
 
+
+        <!------------------------------- happy-customer start  ----------------------------------------->
+
         <div class="happy-customer f-cen f-col p12 g20">
             <h1 class="f-cen">Our happy <span> customers </span> rate!</h1>
             <div class="cards f-evn p16 g32">
-                <div class="card f-cen f-col p20 g16">
+                <div class="card f-start f-col p20 g16">
+                    <div class="customer-name f-cen g16">
+                        <img src="images/man3.webp" class="r50 " alt="">
+                        <div class="customer-name2">
+                        <h3 class="txt-sub">Mohammad Makhmalji</h3>
+                        <h4 class="txt-sub">Full-Stack developer</h5>
+                    </div>
+                </div>
                     <img src="images/most3.webp" alt="">
-                    <div class="stars f-cen g12">
+                    <div class="stars f-start g12">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fas fa-star-half-stroke"></i>
 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+                            adipisci.</p>
                     </div>
-                    <p class="f-cen txt-cen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
-                        adipisci.</p>
                 </div>
 
-
-                <div class="card f-cen f-col p20 g16">
+                <div class="card f-start f-col p20 g16">
+                    <div class="customer-name f-cen g16">
+                        <img src="images/man3.webp" class="r50 " alt="">
+                        <div class="customer-name2">
+                        <h3 class="txt-sub">Mohammad Makhmalji</h3>
+                        <h4 class="txt-sub">Full-Stack developer</h5>
+                    </div>
+                </div>
                     <img src="images/most6.webp" alt="">
-                    <div class="stars f-cen g12">
+                    <div class="stars f-start g12">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fas fa-star-half-stroke"></i>
 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+                            adipisci.</p>
                     </div>
-                    <p class="f-cen txt-cen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
-                        adipisci.</p>
                 </div>
 
-
-                <div class="card f-cen f-col p20 g16">
-                    <img src="images/most8.webp" alt="">
-                    <div class="stars f-cen g12">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-
+<div class="card f-start f-col p20 g16">
+                    <div class="customer-name f-cen g16">
+                        <img src="images/man3.webp" class="r50 " alt="">
+                        <div class="customer-name2">
+                        <h3 class="txt-sub">Mohammad Makhmalji</h3>
+                        <h4 class="txt-sub">Full-Stack developer</h5>
                     </div>
-                    <p class="f-cen txt-cen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
-                        adipisci.</p>
+                </div>
+                    <img src="images/most8.webp" alt="">
+                    <div class="stars f-start g12">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+                            adipisci.</p>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!------------------------------- happy-customer end  ----------------------------------------->
+
 
         <div class="help f-cen f-col g12">
             <h1 class="txt-cen txt-sub">We will help you to get your perfect sport wear</h1>
@@ -279,6 +349,38 @@
 
 
     <!-------------------------------  Counter end  ------------------------------------------------->
+
+    
+<!-------------------------------  allow cookies start  ------------------------------------------------->
+
+<div class="allow-cookies f-bet p12 g12 bg-sub hide">
+    <h3>Allow access to cookies to provide a better experience based on your geographic location information</h3>
+    <div class="btns f-cen g12">
+        <button id="allow" class="btn">Allow Cookies</button>
+        <i class="fa-solid fa-close txt-sub2" id="close"></i>
+    </div>
+</div>
+
+
+<!-------------------------------  allow cookies end  ------------------------------------------------->
+
+
+<!------------------------------- loading page start ------------------------------->
+    
+<div class="loading-page container f-cen">
+    <div class="load-container f-cen">
+        <div class="load-card f-cen">
+            <div class="load1 f-cen">
+                <div class="load2">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<!------------------------------- loading page end ------------------------------->
 
 
     <!-------------------------------  footer start  ------------------------------------------------->
@@ -336,6 +438,11 @@
 
     <script src="scripts/index.js"></script>
     <script src="scripts/window.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+
 </body>
 
 </html>
